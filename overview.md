@@ -78,8 +78,8 @@ Pagination info is included in the [Link header](http://tools.ietf.org/html/rfc5
 
 The URL for pagination is shown inside angled brackets, and the type of pagination link is described in the `rel` field:
 
-```shell
-Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/events?desc=id&offset=51f42cc7b2db42c554000086&per_page=10>; rel="next"
+```http
+Link: <https://api.bugsnag.com/projects?offset=51f42cc7b2db42c554000086>; rel="next"
 ```
 
 The possible values for `rel` are:
