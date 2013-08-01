@@ -5,14 +5,14 @@ The Accounts API allows you to get information about Bugsnag accounts. Accounts 
 
 Contents
 --------
-- [Get your account details](#get-your-account-details)
-- [Get your account usage](#get-your-account-usage)
+- [Get Account details](#get-account-details)
+- [Get Account usage](#get-account-usage)
 
 
-Get your account details
-------------------------
+Get Account details
+-------------------
 
-Get details about your account, including name and current billing plan.
+Get details for the currently authenticated Account, including name and current billing plan.
 
 ```http
 GET /account
