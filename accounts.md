@@ -5,6 +5,7 @@ The Accounts API allows you to get information about Bugsnag accounts. Accounts 
 
 Contents
 --------
+
 - [Get Account details](#get-account-details)
 - [Get Account usage](#get-account-usage)
 
@@ -19,28 +20,36 @@ GET /account
 ```
 
 ### Response
+
+```http
+Status: 200 OK
+```
 ```json
 {
   "id": "515fb9337c1074f6fd000009",
-  "name": "Bugsnag",
-  "accountCreator": {
-    "id": "515fb9337c1074f6fd000003",
-    "name": "Bob Hoskins",
-    "accountAdmin": true,
-    "email": "bob@example.com",
-    "gravatarUrl": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
-    "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
-  },
-  "billingContact": {
+  "name": "Example",
+  "account_creator": {
     "id": "515fb9337c1074f6fd000007",
     "name": "James Smith",
-    "accountAdmin": true,
+    "account_admin": true,
     "email": "james@example.com",
-    "gravatarUrl": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a71",
+    "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a7",
+    "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a7",
+    "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
     "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
   },
-  "createdAt": "2013-04-06T05:57:07Z",
-  "updatedAt": "2013-07-29T17:46:11Z"
+  "billing_contact": {
+    "id": "515fb9337c1074f6fd000007",
+    "name": "James Smith",
+    "account_admin": true,
+    "email": "james@example.com",
+    "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a7",
+    "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a7",
+    "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+    "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+  },
+  "created_at": "2013-04-06T05:57:07Z",
+  "updated_at": "2013-07-29T17:46:11Z"
 }
 ```
 
@@ -55,8 +64,31 @@ GET /account/usage
 ```
 
 ### Response
+
+```http
+Status: 200 OK
+```
 ```json
 {
-  "TODO": "response goes here"
+  "upcoming_charges": {
+    "base_cost": 0,
+    "total": 0,
+    "usage_charge": 0
+  },
+  "units": {
+    "type": "event",
+    "quantity": 1
+  },
+  "tallies": [{
+    "date": "2013-08-05T07:00:00Z",
+    "total_units": 1,
+    "project_breakdown": [
+      {
+        "units": 1,
+        "project_id": "517f5aabc6b6b9076d000018",
+        "project_url": "http://api.bugsnag.com/projects/517f5aabc6b6b9076d000018"
+      }
+    ]
+  }]
 }
 ```

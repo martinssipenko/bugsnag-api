@@ -1,7 +1,7 @@
 Users API
 =========
 
-The Users API allows you to get information about Bugsnag users. Users are people who can sign-in and view errors on Bugsnag, and are part of one or more [Accounts](accounts).
+The Users API allows you to get information about Bugsnag users. Users are people who can sign-in and view errors on Bugsnag. Users can be members of one or more [Accounts](accounts).
 
 
 Contents
@@ -11,8 +11,8 @@ Contents
 - [List a Project's Users](#list-a-project-s-users)
 - [Get User details](#get-user-details)
 - [Invite a User to an Account](#invite-a-user-to-an-account)
-- [Delete a User from an Account](#delete-a-user-from-an-account)
 - [Update a User's Account permissions](#update-a-user-s-account-permissions)
+- [Delete a User from an Account](#delete-a-user-from-an-account)
 
 
 List your Account's Users
@@ -39,14 +39,15 @@ Link: <https://api.bugsnag.com/users?offset=517c41f07c1074aee9000002>; rel="next
 ```json
 [
   {
-    "id": "517c41f07c1074aee9000002",
+    "id": "515fb9337c1074f6fd000007",
     "name": "James Smith",
-    "accountAdmin": true,
+    "account_admin": true,
     "email": "james@example.com",
-    "gravatarUrl": "https://secure.gravatar.com/avatar/9ceeacde2574676c9ef60437aaaa20b",
-    "htmlUrl": "https://bugsnag.com/accounts/bugsnag/users/james-plus-test2-at-bugsnag-dot-com/edit",
-    "projectsUrl": "https://api.bugsnag.com/users/517c41f07c1074aee9000002/projects",
-    "url": "https://api.bugsnag.com/users/517c41f07c1074aee9000002"
+    "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+    "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+    "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+    "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+    "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
   }
 ]
 ```
@@ -76,14 +77,15 @@ Link: <https://api.bugsnag.com/projects/517c41f07c1074aee9000002/users?offset=51
 ```json
 [
   {
-    "id": "517c41f07c1074aee9000002",
+    "id": "515fb9337c1074f6fd000007",
     "name": "James Smith",
-    "accountAdmin": true,
+    "account_admin": true,
     "email": "james@example.com",
-    "gravatarUrl": "https://secure.gravatar.com/avatar/9ceeacde2574676c9ef60437aaaa20b",
-    "htmlUrl": "https://bugsnag.com/accounts/bugsnag/users/james-plus-test2-at-bugsnag-dot-com/edit",
-    "projectsUrl": "https://api.bugsnag.com/users/517c41f07c1074aee9000002/projects",
-    "url": "https://api.bugsnag.com/users/517c41f07c1074aee9000002"
+    "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+    "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+    "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+    "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+    "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
   }
 ]
 ```
@@ -105,14 +107,15 @@ Status: 200 OK
 ```
 ```json
 {
-  "id": "517c41f07c1074aee9000002",
+  "id": "515fb9337c1074f6fd000007",
   "name": "James Smith",
-  "accountAdmin": true,
+  "account_admin": true,
   "email": "james@example.com",
-  "gravatarUrl": "https://secure.gravatar.com/avatar/9ceeacde2574676c9ef60437aaaa20b",
-  "htmlUrl": "https://bugsnag.com/accounts/bugsnag/users/james-plus-test2-at-bugsnag-dot-com/edit",
-  "projectsUrl": "https://api.bugsnag.com/users/517c41f07c1074aee9000002/projects",
-  "url": "https://api.bugsnag.com/users/517c41f07c1074aee9000002"
+  "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+  "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+  "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
 }
 ```
 
@@ -129,6 +132,8 @@ POST /account/users
 ### Parameters
 
 - **email** - the email address of the person to invite
+- **admin** - `true`, `false` should this person be an account admin? Default: `false`
+- **project_ids** - an array of Project IDs this person can access
 
 ### Response
 
@@ -136,7 +141,51 @@ POST /account/users
 Status: 201 Created
 ```
 ```json
-TODO: Response json (the new or existing user object)
+{
+  "id": "515fb9337c1074f6fd000007",
+  "name": "James Smith",
+  "account_admin": true,
+  "email": "james@example.com",
+  "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+  "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+  "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+}
+```
+
+
+Update a User's Account permissions
+-----------------------------------
+
+Update a User's Account permissions, including Project access and Account admin status. Responds with the newly created User.
+
+```http
+PATCH /account/users/:user_id
+```
+
+### Parameters
+
+- **admin** - `true`, `false` should this person be an account admin? Default: `false`
+- **project_ids** - an array of Project IDs this person can access
+
+### Response
+
+```http
+Status: 200 OK
+```
+```json
+{
+  "id": "515fb9337c1074f6fd000007",
+  "name": "James Smith",
+  "account_admin": true,
+  "email": "james@example.com",
+  "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+  "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+  "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+}
 ```
 
 
@@ -153,27 +202,4 @@ DELETE /account/users/:user_id
 
 ```http
 Status: 204 No Content
-```
-
-
-Update a User's Account permissions
------------------------------------
-
-Update a User's Account permissions, including Project access and Account admin status.
-
-```http
-PATCH /account/users/:user_id
-```
-
-### Parameters
-
-- TODO
-
-### Response
-
-```http
-Status: 200 OK
-```
-```json
-TODO: Response json (the updated user object)
 ```
