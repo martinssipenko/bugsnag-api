@@ -1,0 +1,105 @@
+Comments API
+============
+
+The Comments API allows you to get detailed information and delete comments on Bugsnag [Errors](errors).
+
+
+Contents
+--------
+
+- [List an Error's Comments](#list-an-error-s-comments)
+- [Get Comment details](#get-comment-details)
+- [Delete a Comment](#delete-a-comment)
+
+
+List an Error's Comments
+------------------------
+
+Get a list of all comments for the given Bugsnag [Error](errors).
+
+```http
+GET /errors/:error_id/comments
+```
+
+### Parameters
+
+- **sort** - `createdAt`. Default: `createdAt`.
+- **direction** - `asc`, `desc`. Default `desc`.
+- **per_page** - how many results to return per page. Default 30.
+
+### Response
+
+```http
+Status: 200 OK
+Link: <https://api.bugsnag.com/errors/50baed119bf39c1431000004/comments?offset=51f93d6af002c6686d058c49>; rel="next"
+```
+```json
+[
+  {
+    "id": "520042527c1074dced000017",
+    "message": "This was my bug, fixed now",
+    "user": {
+      "account_admin": true,
+      "email": "james@example.com",
+      "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+      "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+      "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+      "id": "515fb9337c1074f6fd000007",
+      "name": "James Smith",
+      "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+      "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+    },
+    "created_at": "2013-08-06T00:24:50Z"
+  }
+]
+```
+
+
+Get Comment details
+-------------------
+
+Get the details of the given Comment.
+
+```http
+GET /comments/:comment_id
+```
+
+### Response
+
+```http
+Status: 200 OK
+```
+```json
+{
+  "id": "520042527c1074dced000017",
+  "message": "This was my bug, fixed now",
+  "user": {
+    "account_admin": true,
+    "email": "james@example.com",
+    "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+    "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+    "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+    "id": "515fb9337c1074f6fd000007",
+    "name": "James Smith",
+    "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+    "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+  },
+  "created_at": "2013-08-06T00:24:50Z"
+}
+```
+
+
+Delete a Comment
+----------------
+
+Delete a Comment from Bugsnag.
+
+```http
+DELETE /comments/:comment_id
+```
+
+### Response
+
+```http
+Status: 204 No Content
+```

@@ -1,7 +1,7 @@
 Projects API
 ============
 
-The Projects API allows you to get information about Bugsnag projects. Projects represent individual applications on your Bugsnag account for which you are tracking errors.
+The Projects API allows you to create, modify, delete and get detailed information about Bugsnag projects. Projects represent individual applications on your Bugsnag account for which you are tracking errors.
 
 
 Contents

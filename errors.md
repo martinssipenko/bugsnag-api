@@ -1,7 +1,7 @@
 Errors API
-----------
+============
 
-Bugsnag represents groups of similar exceptions as what we call *Errors*. The Errors API allows you to get information about Bugsnag Errors.
+Bugsnag represents groups of similar exceptions as what we call *Errors*. The Errors API allows you to update, delete and get detailed information about Bugsnag Errors.
 
 
 Contents
