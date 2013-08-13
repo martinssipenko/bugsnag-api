@@ -173,7 +173,7 @@ Status: 201 Created
 Update a Project
 ----------------
 
-Update a Bugsnag Project's name and other information. Responds with the newly created Project.
+Update a Bugsnag Project's name and other information. Responds with the newly updated Project.
 
 ```http
 PATCH /projects/:project_id
@@ -181,8 +181,8 @@ PATCH /projects/:project_id
 
 ### Parameters
 
-- **name** - the project's name
-- **type** - `rails`, `django`, `php`, `android`, `ios`, `sinatra`, `node`, `unity`, `js`, `java`, `other`. Default `other`.
+- **name** - the project's name 
+- **type** - `rails`, `django`, `php`, `android`, `ios`, `sinatra`, `node`, `unity`, `js`, `java`, `other`.
 
 ### Response
 
