@@ -79,16 +79,10 @@ Pagination info is included in the [Link header](http://tools.ietf.org/html/rfc5
 The URL for pagination is shown inside angled brackets, and the type of pagination link is described in the `rel` field:
 
 ```http
-Link: <https://api.bugsnag.com/projects?offset=51f42cc7b2db42c554000086>; rel="next"
+Link: <https://api.bugsnag.com/account/projects?offset=51f42cc7b2db42c554000086>; rel="next"
 ```
 
 The possible values for `rel` are:
 
 - `next` - Shows the URL for the next page of results
 - `prev` - Shows the URL for the previous page of results
-
-
-Rate Limits
------------
-
-While in beta, there is no rate-limiting on the Bugsnag API. We will be adding reasonable rate limits in the future.
