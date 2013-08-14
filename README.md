@@ -86,9 +86,3 @@ The possible values for `rel` are:
 
 - `next` - Shows the URL for the next page of results
 - `prev` - Shows the URL for the previous page of results
-
-
-Rate Limits
------------
-
-While in beta, there is no rate-limiting on the Bugsnag API. We will be adding reasonable rate limits in the future.
