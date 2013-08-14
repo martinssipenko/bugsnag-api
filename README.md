@@ -1,5 +1,5 @@
-Bugsnag API Overview
-====================
+Bugsnag API
+===========
 
 Bugsnag provides a simple JSON-based API to access information about your
 Bugsnag account, project and errors.
