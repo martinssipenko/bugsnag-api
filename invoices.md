@@ -14,7 +14,7 @@ Contents
 List your Account's Invoices
 ----------------------------
 
-Get a list of all Invoices for the currently authenticated Bugsnag [Account](accounts).
+Get a list of all Invoices for the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 GET /account/invoices
