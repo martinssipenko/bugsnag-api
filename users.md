@@ -26,7 +26,7 @@ GET /account/users
 
 ### Parameters
 
-- **sort** - `createdAt`. Default `createdAt`.
+- **sort** - `created_at`. Default `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 30.
 
@@ -64,7 +64,7 @@ GET /projects/:project_id/users
 
 ### Parameters
 
-- **sort** - `createdAt`. Default `createdAt`.
+- **sort** - `created_at`. Default `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 30.
 
@@ -161,7 +161,7 @@ Update a User's Account permissions
 Update a User's Account permissions, including Project access and Account admin status. Responds with the newly created User.
 
 ```http
-PATCH /account/users/:user_id
+PUT /account/users/:user_id
 ```
 
 ### Parameters

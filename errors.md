@@ -24,7 +24,7 @@ GET /projects/:project_id/errors
 
 ### Parameters
 
-- **sort** - `createdAt`. Default: `createdAt`.
+- **sort** - `created_at`. Default: `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 30.
 
@@ -106,7 +106,7 @@ Update an Error's status
 Update the status (resolved, unresolved, etc) of an Error.
 
 ```http
-PATCH /errors/:error_id
+PUT /errors/:error_id
 ```
 
 ### Parameters

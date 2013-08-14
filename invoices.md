@@ -22,7 +22,7 @@ GET /account/invoices
 
 ### Parameters
 
-- **sort** - `createdAt`. Default: `createdAt`.
+- **sort** - `created_at`. Default: `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 30.
 
