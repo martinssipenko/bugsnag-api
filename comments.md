@@ -1,7 +1,7 @@
 Comments API
 ============
 
-The Comments API allows you to get detailed information and delete comments on Bugsnag [Errors](errors).
+The Comments API allows you to get detailed information and delete comments on Bugsnag [Errors](errors.md).
 
 
 Contents
@@ -15,7 +15,7 @@ Contents
 List an Error's Comments
 ------------------------
 
-Get a list of all comments for the given Bugsnag [Error](errors).
+Get a list of all comments for the given Bugsnag [Error](errors.md).
 
 ```http
 GET /errors/:error_id/comments

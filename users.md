@@ -1,7 +1,7 @@
 Users API
 =========
 
-The Users API allows you to get information about Bugsnag users. Users are people who can sign-in and view errors on Bugsnag. Users can be members of one or more [Accounts](accounts).
+The Users API allows you to get information about Bugsnag users. Users are people who can sign-in and view errors on Bugsnag. Users can be members of one or more [Accounts](accounts.md).
 
 
 Contents
@@ -18,7 +18,7 @@ Contents
 List your Account's Users
 -------------------------
 
-Get a list of all Users with access to the currently authenticated Bugsnag [Account](accounts).
+Get a list of all Users with access to the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 GET /account/users
@@ -56,7 +56,7 @@ Link: <https://api.bugsnag.com/users?offset=517c41f07c1074aee9000002>; rel="next
 List a Project's Users
 ---------------------
 
-Get a list of Users with access to the specified [Project](projects).
+Get a list of Users with access to the specified [Project](projects.md).
 
 ```http
 GET /projects/:project_id/users
@@ -94,7 +94,7 @@ Link: <https://api.bugsnag.com/projects/517c41f07c1074aee9000002/users?offset=51
 Get User details
 ----------------
 
-Get the details about a Bugsnag user, including name and email address. You can only view details for Users on the currently authenticated Bugsnag [Account](accounts).
+Get the details about a Bugsnag user, including name and email address. You can only view details for Users on the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 GET /users/:user_id
@@ -123,7 +123,7 @@ Status: 200 OK
 Invite a User to an Account
 ---------------------------
 
-Invite a user to become a member of the currently authenticated Bugsnag [Account](accounts).
+Invite a user to become a member of the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 POST /account/users
@@ -192,7 +192,7 @@ Status: 200 OK
 Delete a user from an Account
 -----------------------------
 
-Remove a user from the currently authenticated Bugsnag [Account](accounts).
+Remove a user from the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 DELETE /account/users/:user_id
