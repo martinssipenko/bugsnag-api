@@ -26,7 +26,7 @@ GET /projects/:project_id/events
 
 - **sort** - `created_at`. Default: `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+- **per_page** - how many results to return per page. Default 10.
 
 ### Response
 
