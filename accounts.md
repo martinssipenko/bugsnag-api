@@ -7,13 +7,12 @@ Contents
 --------
 
 - [Get Account details](#get-account-details)
-- [Get Account usage](#get-account-usage)
 
 
 Get Account details
 -------------------
 
-Get details for the currently authenticated Account, including name and current billing plan.
+Get details for the currently authenticated Account.
 
 ```http
 GET /account

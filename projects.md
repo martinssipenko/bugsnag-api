@@ -26,7 +26,7 @@ GET /account/projects
 
 ### Parameters
 
-- **sort** - `createdAt`. Default: `createdAt`.
+- **sort** - `created_at`. Default: `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 30.
 
@@ -68,7 +68,7 @@ GET /user/:user_id/projects
 
 ### Parameters
 
-- **sort** - `createdAt`. Default: `createdAt`.
+- **sort** - `created_at`. Default: `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 30.
 
