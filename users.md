@@ -133,7 +133,7 @@ POST /account/users
 
 - **email** - the email address of the person to invite
 - **admin** - `true`, `false` should this person be an account admin? Default: `false`
-- **project_ids** - an array of Project IDs this person can access
+- **project_ids** - a complete array of Project IDs this person can access
 
 ### Response
 
@@ -158,7 +158,7 @@ Status: 201 Created
 Update a User's Account permissions
 -----------------------------------
 
-Update a User's Account permissions, including Project access and Account admin status. Responds with the newly created User.
+Update a User's Account permissions, including Project access and Account admin status. Responds with the newly updated User.
 
 ```http
 PUT /account/users/:user_id
@@ -167,7 +167,7 @@ PUT /account/users/:user_id
 ### Parameters
 
 - **admin** - `true`, `false` should this person be an account admin? Default: `false`
-- **project_ids** - an array of Project IDs this person can access
+- **project_ids** - a complete array of Project IDs this person can access
 
 ### Response
 
