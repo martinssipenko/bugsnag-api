@@ -16,7 +16,7 @@ Contents
 List a Project's Errors
 -----------------------
 
-Get a list of all errors (grouped exceptions) for the given Bugsnag [Project](projects).
+Get a list of all errors (grouped exceptions) for the given Bugsnag [Project](projects.md).
 
 ```http
 GET /projects/:project_id/errors
@@ -146,7 +146,7 @@ Status: 200 OK
 Delete an Error
 ---------------
 
-Delete an Error and all associated [Events](events) from Bugsnag.
+Delete an Error and all associated [Events](events.md) from Bugsnag.
 
 ```http
 DELETE /errors/:error_id

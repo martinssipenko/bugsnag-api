@@ -1,7 +1,7 @@
 Accounts API
 ============
 
-The Accounts API allows you to get information about Bugsnag accounts. Accounts normally represent a company or individual, can contain many [Projects](projects) and many [Users](users) can have access to the Account.
+The Accounts API allows you to get information about Bugsnag accounts. Accounts normally represent a company or individual, can contain many [Projects](projects.md) and many [Users](users.md) can have access to the Account.
 
 Contents
 --------

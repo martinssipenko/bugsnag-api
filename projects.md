@@ -18,7 +18,7 @@ Contents
 List your Account's Projects
 ----------------------------
 
-Get a list of all Projects for the currently authenticated Bugsnag [Account](accounts).
+Get a list of all Projects for the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 GET /account/projects
@@ -60,7 +60,7 @@ Link: <https://api.bugsnag.com/account/projects?offset=50baee27a43ccdf778000002>
 List a User's Projects
 ----------------------
 
-Get a list of Projects that the specified Bugsnag [User](users) has access to.
+Get a list of Projects that the specified Bugsnag [User](users.md) has access to.
 
 ```http
 GET /user/:user_id/projects
@@ -135,7 +135,7 @@ Status: 200 OK
 Create a Project
 ----------------
 
-Create a new Project on the currently authenticated Bugsnag [Account](accounts).
+Create a new Project on the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 POST /account/projects
@@ -211,7 +211,7 @@ Status: 200 OK
 Delete a Project
 ----------------
 
-Delete a Project and all associated [Errors](errors) and [Events](events) from your Bugsnag Account.
+Delete a Project and all associated [Errors](errors.md) and [Events](events.md) from your Bugsnag Account.
 
 ```http
 DELETE /projects/:project_id
