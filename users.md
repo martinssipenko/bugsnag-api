@@ -161,7 +161,7 @@ Update a User's Account permissions
 Update a User's Account permissions, including Project access and Account admin status. Responds with the newly created User.
 
 ```http
-PATCH /account/users/:user_id
+PUT /account/users/:user_id
 ```
 
 ### Parameters

@@ -176,7 +176,7 @@ Update a Project
 Update a Bugsnag Project's name and other information. Responds with the newly updated Project.
 
 ```http
-PATCH /projects/:project_id
+PUT /projects/:project_id
 ```
 
 ### Parameters
