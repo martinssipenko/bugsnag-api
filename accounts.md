@@ -7,7 +7,6 @@ Contents
 --------
 
 - [Get Account details](#get-account-details)
-- [Get Account usage](#get-account-usage)
 
 
 Get Account details
