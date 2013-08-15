@@ -68,7 +68,7 @@ Errors
 Hypermedia URLs
 ---------------
 
-All API resources may have one or more `*Url` properties linking to other resources. These are meant to provide explicit URLs so that API clients don’t need to construct URLs on their own. It is highly recommended that API clients use these. Doing so will make future upgrades of the API easier for developers.
+All API resources may have one or more `*_url` properties linking to other resources. These are meant to provide explicit URLs so that API clients don’t need to construct URLs on their own. It is highly recommended that API clients use these. Doing so will make future upgrades of the API easier for developers.
 
 
 Pagination
