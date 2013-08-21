@@ -102,7 +102,7 @@ Link: <https://api.bugsnag.com/user/515fb9337c1074f6fd000007/projects?offset=50b
 Get Project Details
 -------------------
 
-Get the details of a the given Bugsnag Project.
+Get the details of the given Bugsnag Project.
 
 ```http
 GET /projects/:project_id
