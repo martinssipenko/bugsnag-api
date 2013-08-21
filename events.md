@@ -1,7 +1,7 @@
 Events API
 ==========
 
-Bugsnag represents individual crashes (typically an exception in your applications) as what we call *Events*. The Events API allows you to get information and delete Bugsnag Events.
+Bugsnag represents individual crashes (typically an exception in your applications) as what we call *Events*. The Events API allows you to get information about and delete Bugsnag Events.
 
 
 Contents
