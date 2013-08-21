@@ -53,6 +53,7 @@ Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/events?offset=5
       },
     ],
     "user_id": "user@yoursite.com",
+    "received_at": "2012-12-02T05:54:25Z",
     "context": "events#show",
     "app_version": "1.0.1",
     "os_version": "Windows Vista",
