@@ -84,7 +84,7 @@ GET /errors/:error_id/events
 
 ```http
 Status: 200 OK
-Link: <http://api.bugsnag.dev/projects/515fbcfc7c1074a459000001/events?desc=id&offset=51ac4eef95f3b06728000afc&per_page=1>; rel="next"
+Link: <http://api.bugsnag.com/projects/515fbcfc7c1074a459000001/events?desc=id&offset=51ac4eef95f3b06728000afc&per_page=1>; rel="next"
 ```
 ```json
 [
