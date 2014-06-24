@@ -26,9 +26,11 @@ GET /account/projects
 
 ### Parameters
 
-- **sort** - `created_at`. Default: `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `30`
 
 ### Response
 
@@ -68,9 +70,11 @@ GET /user/:user_id/projects
 
 ### Parameters
 
-- **sort** - `created_at`. Default: `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `30`
 
 ### Response
 
@@ -143,8 +147,10 @@ POST /account/projects
 
 ### Parameters
 
-- **name** - the project's name
-- **type** - `rails`, `django`, `php`, `android`, `ios`, `sinatra`, `node`, `unity`, `js`, `java`, `other`. Default `other`.
+Name        | Description
+----------- | -----------
+`name`      | The project's name, eg `Website`
+`type`      | The type of the project, can be one of `rails`, `django`, `php`, `android`, `ios`, `sinatra`, `node`, `unity`, `js`, `java` or `other`. Default `other`
 
 ### Response
 
@@ -181,8 +187,10 @@ PUT /projects/:project_id
 
 ### Parameters
 
-- **name** - the project's name 
-- **type** - `rails`, `django`, `php`, `android`, `ios`, `sinatra`, `node`, `unity`, `js`, `java`, `other`.
+Name        | Description
+----------- | -----------
+`name`      | The project's name, eg `Website`
+`type`      | The type of the project, can be one of `rails`, `django`, `php`, `android`, `ios`, `sinatra`, `node`, `unity`, `js`, `java` or `other`. Default `other`
 
 ### Response
 

@@ -24,9 +24,11 @@ GET /projects/:project_id/events
 
 ### Parameters
 
-- **sort** - `created_at`. Default: `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 10.
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `10`
 
 ### Response
 
@@ -76,9 +78,11 @@ GET /errors/:error_id/events
 
 ### Parameters
 
-- **sort** - `created_at`. Default: `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 10.
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `10`
 
 ### Response
 

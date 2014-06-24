@@ -26,9 +26,11 @@ GET /account/users
 
 ### Parameters
 
-- **sort** - `created_at`. Default `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `30`
 
 ### Response
 
@@ -64,9 +66,11 @@ GET /projects/:project_id/users
 
 ### Parameters
 
-- **sort** - `created_at`. Default `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `30`
 
 ### Response
 
@@ -131,9 +135,12 @@ POST /account/users
 
 ### Parameters
 
-- **email** - the email address of the person to invite
-- **admin** - `true`, `false` should this person be an account admin? Default: `false`
-- **project_ids** - a complete array of Project IDs this person can access
+Name          | Description
+------------- | -----------
+`email`       | The email address of the person to invite, eg ``james@example.com``
+`admin`       | Should this person be an account admin? One of `true` or `false`. Default: `false`
+`project_ids` | A comma separated list of project IDs this person can access
+
 
 ### Response
 
@@ -166,8 +173,10 @@ PUT /account/users/:user_id
 
 ### Parameters
 
-- **admin** - `true`, `false` should this person be an account admin? Default: `false`
-- **project_ids** - a complete array of Project IDs this person can access
+Name          | Description
+------------- | -----------
+`admin`       | Should this person be an account admin? One of `true` or `false`. Default: `false`
+`project_ids` | A comma separated list of project IDs this person can access
 
 ### Response
 
@@ -196,7 +205,7 @@ Remove a user from the currently authenticated Bugsnag [Account](accounts.md).
 
 ```http
 DELETE /account/users/:user_id
-````
+```
 
 ### Response
 
