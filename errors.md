@@ -23,13 +23,15 @@ GET /projects/:project_id/errors
 ```
 
 ### Parameters
-- **release_stages** - errors on the given release stages, eg `production` or `production,staging`.
-- **app_versions** - errors affecting the given app versions, eg `eq1.0.0` (errors affecting 1.0.0), `gte1.0.1` (errors affecting >= 1.0.1).
-- **severity** - errors with the given severities, eg `error` or `error,warning`.
-- **status** - errors with the given status, eg `open`.
-- **sort** - `updated_at`. Default: `updated_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+| Name             | Description
+| ---------------- | -----------
+| `release_stages` | Only errors on the given release stages are returned, eg `production` or `production,staging`
+| `app_versions`   | Only errors affecting the given app versions are returned, eg `eq1.0.0` (errors affecting 1.0.0), `gte1.0.1` (errors affecting >= 1.0.1)
+| `severity`       | Only errors with the given severities are returned, eg `error` or `error,warning`
+| `status`         | Only errors with the given status are returned, eg `open`
+| `sort`           | What to sort results by. Can be only `updated_at`. Default: `updated_at`
+| `direction`      | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+| `per_page`       | How many results to return per page. Default: `30`
 
 ### Response
 
