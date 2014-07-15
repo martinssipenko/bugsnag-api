@@ -33,6 +33,7 @@ Name             | Description
 `sort`           | What to sort results by. Can be only `updated_at`. Default: `updated_at`
 `direction`      | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`       | How many results to return per page. Default: `30`
+`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -64,7 +65,8 @@ Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors?offset=1
     "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
     "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
     "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+    "most_recent_event": {}
   }
 ]
 ```
@@ -78,6 +80,12 @@ Get the details of the given Bugsnag Error.
 ```http
 GET /errors/:error_id
 ```
+
+### Parameters
+
+Name             | Description
+---------------- | -----------
+`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -107,7 +115,8 @@ Status: 200 OK
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
   "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
   "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+  "most_recent_event": {}
 }
 ```
 
@@ -126,6 +135,7 @@ PUT /errors/:error_id
 Name       | Description
 ---------- | -----------
 `resolved` | The new status for this error, can be either `true` or `false`
+`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -155,7 +165,8 @@ Status: 200 OK
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
   "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
   "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+  "most_recent_event": {}
 }
 ```
 
