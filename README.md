@@ -4,9 +4,9 @@ Bugsnag API
 Bugsnag provides a simple JSON-based API to access information about your
 Bugsnag account, project and errors.
 
-[Bugsnag](http://bugsnag.com) captures errors in real-time from your web, 
-mobile and desktop applications, helping you to understand and resolve them 
-as fast as possible. [Create a free account](http://bugsnag.com) to start 
+[Bugsnag](http://bugsnag.com) captures errors in real-time from your web,
+mobile and desktop applications, helping you to understand and resolve them
+as fast as possible. [Create a free account](https://bugsnag.com) to start
 capturing exceptions from your applications.
 
 
@@ -39,7 +39,19 @@ Schema
 Authentication
 --------------
 
-All requests to the Bugsnag API require authentication. To authenticate APi requests you'll need to use an API token, which you can find on your Bugsnag "Account Settings" dashboard under the "API" section.
+All requests to the Bugsnag API require authentication. To authenticate API requests you can either use your Bugsnag user credentials, or your account-wide API token.
+
+### User Authentication
+
+To access the Bugsnag API as a user, you can use your Bugsnag user credentials via [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). Simply send the email address and password associated with the user:
+
+```shell
+curl -u user@example.com:password https://api.bugsnag.com
+```
+
+### Account Authentication
+
+Alternatively you can authenticate using your account API token, which you can find on your Bugsnag "Account Settings" dashboard under the "API" section.
 
 There are two ways to send the API token with requests, you can send the token in an `Authorization` header:
 
@@ -52,8 +64,6 @@ Alternatively, you can authenticate using a parameter:
 ```shell
 $ curl https://api.bugsnag.com/?auth_token=YOUR-AUTH-TOKEN-HERE
 ```
-
-The `Authorization` header is the preferred method of authentication.
 
 
 Parameters
@@ -70,6 +80,8 @@ Errors
 - Sending invalid JSON will result in a `400 Bad Request` response
 - Sending the wrong type of JSON values will result in a `400 Bad Request` response
 - Trying to access the API without authenticating or with an invalid auth token will result in a `401 Unauthorized` response
+- Trying to access resources which do not exist will result in a `404 Not Found` response
+- Trying to access resources which you do not have access to will result in a `404 Not Found` response, in order to avoid disclosing the existence of user data
 
 
 Hypermedia URLs

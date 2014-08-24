@@ -15,13 +15,13 @@ Contents
 - [Delete a Project](#delete-a-project)
 
 
-List your Account's Projects
-----------------------------
+List an Account's Projects
+--------------------------
 
-Get a list of all Projects for the currently authenticated Bugsnag [Account](accounts.md).
+Get a list of all Projects for the specified Bugsnag [Account](accounts.md).
 
 ```http
-GET /account/projects
+GET /accounts/:account_id/projects
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ Name        | Description
 
 ```http
 Status: 200 OK
-Link: <https://api.bugsnag.com/account/projects?offset=50baee27a43ccdf778000002>; rel="next"
+Link: <https://api.bugsnag.com/accounts/70baea119bf39c1431000004/projects?offset=50baee27a43ccdf778000002>; rel="next"
 ```
 ```json
 [
@@ -139,10 +139,10 @@ Status: 200 OK
 Create a Project
 ----------------
 
-Create a new Project on the currently authenticated Bugsnag [Account](accounts.md).
+Create a new Project on the specified Bugsnag [Account](accounts.md).
 
 ```http
-POST /account/projects
+POST /account/:account_id/projects
 ```
 
 ### Parameters
@@ -219,7 +219,7 @@ Status: 200 OK
 Delete a Project
 ----------------
 
-Delete a Project and all associated [Errors](errors.md) and [Events](events.md) from your Bugsnag Account.
+Delete a Project and all associated [Errors](errors.md) and [Events](events.md) from Bugsnag.
 
 ```http
 DELETE /projects/:project_id

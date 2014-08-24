@@ -7,21 +7,22 @@ The Users API allows you to get information about Bugsnag users. Users are peopl
 Contents
 --------
 
-- [List your Account's Users](#list-your-account-s-users)
+- [List an Account's Users](#list-an-account-s-users)
 - [List a Project's Users](#list-a-project-s-users)
 - [Get User details](#get-user-details)
+- [Get the authenticated User](#get-the-authenticated-user)
 - [Invite a User to an Account](#invite-a-user-to-an-account)
 - [Update a User's Account permissions](#update-a-user-s-account-permissions)
 - [Delete a User from an Account](#delete-a-user-from-an-account)
 
 
-List your Account's Users
--------------------------
+List an Account's Users
+-----------------------
 
-Get a list of all Users with access to the currently authenticated Bugsnag [Account](accounts.md).
+Get a list of all Users with access to the specified Bugsnag [Account](accounts.md).
 
 ```http
-GET /account/users
+GET /accounts/:account_id/users
 ```
 
 ### Parameters
@@ -98,7 +99,7 @@ Link: <https://api.bugsnag.com/projects/517c41f07c1074aee9000002/users?offset=51
 Get User details
 ----------------
 
-Get the details about a Bugsnag user, including name and email address. You can only view details for Users on the currently authenticated Bugsnag [Account](accounts.md).
+Get the details about a Bugsnag user, including name and email address. You can only view details for Users in the same authentication scope.
 
 ```http
 GET /users/:user_id
@@ -124,13 +125,44 @@ Status: 200 OK
 ```
 
 
+Get the authenticated User
+--------------------------
+
+*Note: Only available when authenticated with user credentials.*
+
+Get the details of the currently authenticated Bugsnag User.
+
+```http
+GET /user
+```
+
+### Response
+
+```http
+Status: 200 OK
+```
+```json
+{
+  "id": "515fb9337c1074f6fd000007",
+  "name": "James Smith",
+  "account_admin": true,
+  "email": "james@example.com",
+  "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+  "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+  "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+  "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+}
+```
+
+
 Invite a User to an Account
 ---------------------------
 
-Invite a user to become a member of the currently authenticated Bugsnag [Account](accounts.md).
+Invite a user to become a member of the specified Bugsnag [Account](accounts.md).
 
 ```http
-POST /account/users
+POST /accounts/:account_id/users
 ```
 
 ### Parameters
@@ -168,7 +200,7 @@ Update a User's Account permissions
 Update a User's Account permissions, including Project access and Account admin status. Responds with the newly updated User.
 
 ```http
-PUT /account/users/:user_id
+PUT /accounts/:account_id/users/:user_id
 ```
 
 ### Parameters
@@ -201,10 +233,10 @@ Status: 200 OK
 Delete a user from an Account
 -----------------------------
 
-Remove a user from the currently authenticated Bugsnag [Account](accounts.md).
+Remove a user from the specified Bugsnag [Account](accounts.md).
 
 ```http
-DELETE /account/users/:user_id
+DELETE /account/:account_id/users/:user_id
 ```
 
 ### Response
