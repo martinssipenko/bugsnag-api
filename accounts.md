@@ -115,7 +115,7 @@ Status: 200 OK
 Get Account details
 -------------------
 
-Get the details of the given Bugsnag Account.
+Get the details of the specified Bugsnag Account.
 
 ```http
 GET /account/:account_id

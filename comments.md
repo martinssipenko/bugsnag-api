@@ -17,7 +17,7 @@ Contents
 List an Error's Comments
 ------------------------
 
-Get a list of all comments for the given Bugsnag [Error](errors.md).
+Get a list of all comments for the specified Bugsnag [Error](errors.md).
 
 ```http
 GET /errors/:error_id/comments
@@ -62,7 +62,7 @@ Link: <https://api.bugsnag.com/errors/50baed119bf39c1431000004/comments?offset=5
 Get Comment details
 -------------------
 
-Get the details of the given Comment.
+Get the details of the specified Comment.
 
 ```http
 GET /comments/:comment_id
@@ -97,7 +97,7 @@ Create a Comment
 
 *Note: Only available when authenticated with user credentials.*
 
-Create a new Comment on the given Bugsnag [Error](error.md).
+Create a new Comment on the specified Bugsnag [Error](error.md).
 
 ```http
 POST /errors/:error_id/comments

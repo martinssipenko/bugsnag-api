@@ -16,7 +16,7 @@ Contents
 List a Project's Errors
 -----------------------
 
-Get a list of all errors (grouped exceptions) for the given Bugsnag [Project](projects.md).
+Get a list of all errors (grouped exceptions) for the specified Bugsnag [Project](projects.md).
 
 ```http
 GET /projects/:project_id/errors
