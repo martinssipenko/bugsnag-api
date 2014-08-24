@@ -59,6 +59,9 @@ Link: <https://api.bugsnag.com/accounts?offset=50baee27a43ccdf778000002>; rel="n
       "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
       "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
     },
+    "url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009",
+    "users_url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009/users",
+    "projects_url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009/users",
     "created_at": "2013-04-06T05:57:07Z",
     "updated_at": "2013-07-29T17:46:11Z"
   }
@@ -106,6 +109,9 @@ Status: 200 OK
     "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
     "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
   },
+  "url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009",
+  "users_url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009/users",
+  "projects_url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009/users",
   "created_at": "2013-04-06T05:57:07Z",
   "updated_at": "2013-07-29T17:46:11Z"
 }
@@ -150,6 +156,9 @@ Status: 200 OK
     "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
     "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
   },
+  "url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009",
+  "users_url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009/users",
+  "projects_url": "https://api.bugsnag.com/accounts/515fb9337c1074f6fd000009/users",
   "created_at": "2013-04-06T05:57:07Z",
   "updated_at": "2013-07-29T17:46:11Z"
 }
