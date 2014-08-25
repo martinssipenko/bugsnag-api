@@ -39,7 +39,7 @@ Schema
 Authentication
 --------------
 
-All requests to the Bugsnag API require authentication. To authenticate API requests you can either use your Bugsnag user credentials, or your account-wide API token.
+All requests to the Bugsnag API require authentication. To authenticate API requests you can either use your Bugsnag user credentials, or your account-wide auth token.
 
 ### User Authentication
 
@@ -51,7 +51,7 @@ curl -u user@example.com:password https://api.bugsnag.com
 
 ### Account Authentication
 
-Alternatively you can authenticate using your account API token, which you can find on your Bugsnag "Account Settings" dashboard under the "API" section.
+Alternatively you can authenticate using your account auth token, which you can find on your Bugsnag "Account Settings" dashboard under the "API" section.
 
 There are two ways to send the API token with requests, you can send the token in an `Authorization` header:
 
