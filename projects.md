@@ -7,7 +7,7 @@ The Projects API allows you to create, modify, delete and get detailed informati
 Contents
 --------
 
-- [List your Account's Projects](#list-your-account-s-projects)
+- [List an Account's Projects](#list-an-account-s-projects)
 - [List a User's Projects](#list-a-user-s-projects)
 - [Get Project details](#get-project-details)
 - [Create a Project](#create-a-project)
