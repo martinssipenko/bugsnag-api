@@ -24,11 +24,13 @@ GET /projects/:project_id/events
 
 ### Parameters
 
-- **sort** - `created_at`. Default: `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 10.
-- **start_date** - start date to time window the query. Optional, ISO 8601 format ("2013-10-23").
-- **end_date** - end date to time window the query. Optional, ISO 8601 format ("2013-10-24").
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `10`
+`start_date`| Start date to time window the query. Optional, ISO 8601 format ("2013-10-23").
+`end_date`  | End date to time window the query. Optional, ISO 8601 format ("2013-10-24").
 
 ### Response
 
@@ -78,11 +80,13 @@ GET /errors/:error_id/events
 
 ### Parameters
 
-- **sort** - `created_at`. Default `created_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - How many results to return per page. Default 10.
-- **start_date** - Start date to time window the query. Optional, ISO 8601 format ("2013-10-23").
-- **end_date** - End date to time window the query. Optional, ISO 8601 format ("2013-10-24").
+Name        | Description
+----------- | -----------
+`sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
+`direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`  | How many results to return per page. Default: `10`
+`start_date`| Start date to time window the query. Optional, ISO 8601 format ("2013-10-23").
+`end_date`  | End date to time window the query. Optional, ISO 8601 format ("2013-10-24").
 
 ### Response
 

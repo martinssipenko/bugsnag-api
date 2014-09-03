@@ -24,9 +24,16 @@ GET /projects/:project_id/errors
 
 ### Parameters
 
-- **sort** - `updated_at`. Default: `updated_at`.
-- **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 30.
+Name             | Description
+---------------- | -----------
+`release_stages` | Only errors on the given release stages are returned, eg `production` or `production,staging`
+`app_versions`   | Only errors affecting the given app versions are returned, eg `eq1.0.0` (errors affecting 1.0.0), `gte1.0.1` (errors affecting >= 1.0.1)
+`severity`       | Only errors with the given severities are returned, eg `error` or `error,warning`
+`status`         | Only errors with the given status are returned, eg `open`
+`sort`           | What to sort results by. Can be only `updated_at`. Default: `updated_at`
+`direction`      | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`per_page`       | How many results to return per page. Default: `30`
+`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -50,12 +57,16 @@ Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors?offset=1
     "release_stages": {
       "production": 12
     },
+    "app_versions": {
+      "1.0.0": 20
+    },
     "first_received": "2013-04-30T21:03:56Z",
     "last_received": "2013-07-29T10:42:05Z",
     "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
     "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
     "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+    "most_recent_event": {}
   }
 ]
 ```
@@ -69,6 +80,12 @@ Get the details of the given Bugsnag Error.
 ```http
 GET /errors/:error_id
 ```
+
+### Parameters
+
+Name             | Description
+---------------- | -----------
+`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -90,12 +107,16 @@ Status: 200 OK
   "release_stages": {
     "production": 12
   },
+  "app_versions": {
+    "1.0.0": 20
+  },
   "first_received": "2013-04-30T21:03:56Z",
   "last_received": "2013-07-29T10:42:05Z",
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
   "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
   "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+  "most_recent_event": {}
 }
 ```
 
@@ -111,7 +132,10 @@ PUT /errors/:error_id
 
 ### Parameters
 
-- **resolved** - `true`, `false`
+Name       | Description
+---------- | -----------
+`resolved` | The new status for this error, can be either `true` or `false`
+`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -133,12 +157,16 @@ Status: 200 OK
   "release_stages": {
     "production": 12
   },
+  "app_versions": {
+    "1.0.0": 20
+  },
   "first_received": "2013-04-30T21:03:56Z",
   "last_received": "2013-07-29T10:42:05Z",
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
   "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
   "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+  "most_recent_event": {}
 }
 ```
 
