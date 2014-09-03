@@ -29,8 +29,8 @@ Name        | Description
 `sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
 `direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`  | How many results to return per page. Default: `10`
-`start_time`| Start date to time window the query. Optional, ISO 8601 format ("2013-10-23T15:23:34Z").
-`end_time`  | End date to time window the query. Optional, ISO 8601 format ("2013-10-24T15:23:34Z").
+`start_time`| Start time for the query. Optional, ISO 8601 format ("2013-10-23T15:23:34Z").
+`end_time`  | End time for the query. Optional, ISO 8601 format ("2013-10-24T15:23:34Z").
 
 ### Response
 
@@ -85,8 +85,8 @@ Name        | Description
 `sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
 `direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`  | How many results to return per page. Default: `10`
-`start_time`| Start date to time window the query. Optional, ISO 8601 format ("2013-10-23T15:23:34Z").
-`end_time`  | End date to time window the query. Optional, ISO 8601 format ("2013-10-24T15:23:34Z").
+`start_time`| Start time for the query. Optional, ISO 8601 format ("2013-10-23T15:23:34Z").
+`end_time`  | End time for the query. Optional, ISO 8601 format ("2013-10-24T15:23:34Z").
 
 ### Response
 
