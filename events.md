@@ -27,6 +27,8 @@ GET /projects/:project_id/events
 - **sort** - `created_at`. Default: `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
 - **per_page** - how many results to return per page. Default 10.
+- **start_date** - start date to time window the query. Optional, ISO 8601 format ("2013-10-23").
+- **end_date** - end date to time window the query. Optional, ISO 8601 format ("2013-10-24").
 
 ### Response
 
@@ -76,9 +78,11 @@ GET /errors/:error_id/events
 
 ### Parameters
 
-- **sort** - `created_at`. Default: `created_at`.
+- **sort** - `created_at`. Default `created_at`.
 - **direction** - `asc`, `desc`. Default `desc`.
-- **per_page** - how many results to return per page. Default 10.
+- **per_page** - How many results to return per page. Default 10.
+- **start_date** - Start date to time window the query. Optional, ISO 8601 format ("2013-10-23").
+- **end_date** - End date to time window the query. Optional, ISO 8601 format ("2013-10-24").
 
 ### Response
 
