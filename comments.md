@@ -143,7 +143,7 @@ Update a Comment
 Update a Bugsnag Comments's message. Responds with the newly updated Project.
 
 ```http
-PUT /comments/:comment_id
+PATCH /comments/:comment_id
 ```
 
 ### Parameters

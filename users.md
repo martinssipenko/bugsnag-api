@@ -200,7 +200,7 @@ Update a User's Account permissions
 Update a User's Account permissions, including Project access and Account admin status. Responds with the newly updated User.
 
 ```http
-PUT /accounts/:account_id/users/:user_id
+PATCH /accounts/:account_id/users/:user_id
 ```
 
 ### Parameters

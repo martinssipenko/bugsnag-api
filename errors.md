@@ -127,7 +127,7 @@ Update an Error's status
 Update the status (resolved, unresolved, etc) of an Error.
 
 ```http
-PUT /errors/:error_id
+PATCH /errors/:error_id
 ```
 
 ### Parameters
