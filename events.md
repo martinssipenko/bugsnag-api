@@ -16,7 +16,7 @@ Contents
 List a Project's Events
 -----------------------
 
-Get a list of all events (individual crashes) for the given Bugsnag [Project](projects.md).
+Get a list of all events (individual crashes) for the specified Bugsnag [Project](projects.md).
 
 ```http
 GET /projects/:project_id/events
@@ -72,7 +72,7 @@ Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/events?offset=5
 List an Error's Events
 -----------------------
 
-Get a list of all events (individual crashes) grouped under the given Bugsnag [Error](errors.md).
+Get a list of all events (individual crashes) grouped under the specified Bugsnag [Error](errors.md).
 
 ```http
 GET /errors/:error_id/events
