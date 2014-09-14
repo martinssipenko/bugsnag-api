@@ -18,7 +18,7 @@ Contents
 -   [Errors](#errors)
 -   [Hypermedia URLs](#hypermedia-urls)
 -   [Pagination](#pagination)
--   [Helper Libraries](#helper-libraries)
+-   [Ruby Library](#ruby-library)
 -   Resources
     -   [Accounts](accounts.md)
     -   [Users](users.md)
@@ -107,7 +107,7 @@ The possible values for `rel` are:
 - `prev` - Shows the URL for the previous page of results
 
 
-Helper Libraries
-----------------
+Ruby Library
+------------
 
 Check out the [Bugsnag API Toolkit for Ruby](http://bugsnag.dev/docs/api/ruby) for quick read/write access to the Bugsnag API from your Ruby applications.
