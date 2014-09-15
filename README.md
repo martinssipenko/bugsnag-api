@@ -110,4 +110,4 @@ The possible values for `rel` are:
 Ruby Library
 ------------
 
-Check out the [Bugsnag API Toolkit for Ruby](http://bugsnag.dev/docs/api/ruby) for quick read/write access to the Bugsnag API from your Ruby applications.
+Check out the [Bugsnag API Toolkit for Ruby](https://bugsnag.com/docs/api/ruby) for quick read/write access to the Bugsnag API from your Ruby applications.
