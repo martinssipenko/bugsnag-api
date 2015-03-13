@@ -65,7 +65,7 @@ List a User's Projects
 Get a list of Projects that the specified Bugsnag [User](users.md) has access to.
 
 ```http
-GET /user/:user_id/projects
+GET /users/:user_id/projects
 ```
 
 ### Parameters
@@ -80,7 +80,7 @@ Name        | Description
 
 ```http
 Status: 200 OK
-Link: <https://api.bugsnag.com/user/515fb9337c1074f6fd000007/projects?offset=50baee27a43ccdf778000002>; rel="next"
+Link: <https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects?offset=50baee27a43ccdf778000002>; rel="next"
 ```
 ```json
 [
