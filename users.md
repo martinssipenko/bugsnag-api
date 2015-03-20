@@ -172,6 +172,8 @@ Name          | Description
 `email`       | The email address of the person to invite, eg ``james@example.com``
 `admin`       | Should this person be an account admin? One of `true` or `false`. Default: `false`
 `project_ids` | A comma separated list of project IDs this person can access
+`password`    | Optional: the password for the person to invite. Only supported when inviting a new user.
+`name`        | Required if providing a password.
 
 
 ### Response
