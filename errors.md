@@ -1,6 +1,10 @@
 Errors API
 ============
 
+> TODO:JS: describe how to filter Events, Errors and Pivots
+
+> TODO:JS: allow specifying which fields to return
+
 Bugsnag represents groups of similar exceptions as what we call *Errors*. The Errors API allows you to update, delete and get detailed information about Bugsnag Errors.
 
 
@@ -42,33 +46,36 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors?offset=1375288557>; rel="next"
 ```
 ```json
-[
-  {
-    "id": "518031bcd775355c48a1cd4e",
-    "class": "NoMethodError",
-    "last_message": "undefined method `name' for nil:NilClass",
-    "last_context": "mailer#admin",
-    "resolved": false,
-    "occurrences": 12,
-    "users_affected": 13,
-    "contexts": {
-      "mailer#admin": 12
-    },
-    "release_stages": {
-      "production": 12
-    },
-    "app_versions": {
-      "1.0.0": 20
-    },
-    "first_received": "2013-04-30T21:03:56Z",
-    "last_received": "2013-07-29T10:42:05Z",
-    "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
-    "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
-    "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "most_recent_event": {}
-  }
-]
+{
+  "total_count": 123,
+  "items": [
+    {
+      "id": "518031bcd775355c48a1cd4e",
+      "class": "NoMethodError",
+      "last_message": "undefined method `name' for nil:NilClass",
+      "last_context": "mailer#admin",
+      "resolved": false,
+      "occurrences": 12,
+      "users_affected": 13,
+      "contexts": {
+        "mailer#admin": 12
+      },
+      "release_stages": {
+        "production": 12
+      },
+      "app_versions": {
+        "1.0.0": 20
+      },
+      "first_received": "2013-04-30T21:03:56Z",
+      "last_received": "2013-07-29T10:42:05Z",
+      "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
+      "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
+      "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
+      "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
+      "most_recent_event": {}
+    }
+  ]
+}
 ```
 
 

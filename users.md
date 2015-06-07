@@ -1,6 +1,8 @@
 Users API
 =========
 
+> TODO:JS: allow specifying which fields to return
+
 The Users API allows you to get information about Bugsnag users. Users are people who can sign-in and view errors on Bugsnag. Users can be members of one or more [Accounts](accounts.md).
 
 

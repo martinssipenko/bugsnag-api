@@ -1,6 +1,10 @@
 Projects API
 ============
 
+> TODO:JS: return "2-week trend" data
+
+> TODO:JS: allow specifying which fields to return
+
 The Projects API allows you to create, modify, delete and get detailed information about Bugsnag projects. Projects represent individual applications on your Bugsnag account for which you are tracking errors.
 
 
@@ -39,23 +43,27 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/accounts/70baea119bf39c1431000004/projects?offset=50baee27a43ccdf778000002>; rel="next"
 ```
 ```json
-[
-  {
-    "id": "50baed119bf39c1431000004",
-    "name": "Website",
-    "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
-    "errors": 78,
-    "icon": "https://bugsnag.com/assets/frameworks/rails.png",
-    "release_stages": ["production", "development"],
-    "type": "rails",
-    "created_at": "2012-12-02T05:54:25Z",
-    "updated_at": "2013-06-17T19:57:49Z",
-    "errors_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors",
-    "events_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/events",
-    "html_url": "https://bugsnag.com/dashboard/website",
-    "url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004"
-  }
-]
+{
+  "total_count": 123,
+  "items": [
+    {
+      "id": "50baed119bf39c1431000004",
+      "name": "Website",
+      "slug": "website",
+      "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
+      "errors": 78,
+      "icon": "https://bugsnag.com/assets/frameworks/rails.png",
+      "release_stages": ["production", "development"],
+      "type": "rails",
+      "created_at": "2012-12-02T05:54:25Z",
+      "updated_at": "2013-06-17T19:57:49Z",
+      "errors_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors",
+      "events_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/events",
+      "html_url": "https://bugsnag.com/dashboard/website",
+      "url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004"
+    }
+  ]
+}
 ```
 
 
@@ -83,23 +91,27 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects?offset=50baee27a43ccdf778000002>; rel="next"
 ```
 ```json
-[
-  {
-    "id": "50baed119bf39c1431000004",
-    "name": "Website",
-    "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
-    "errors": 78,
-    "icon": "https://bugsnag.com/assets/frameworks/rails.png",
-    "release_stages": ["production", "development"],
-    "type": "rails",
-    "created_at": "2012-12-02T05:54:25Z",
-    "updated_at": "2013-06-17T19:57:49Z",
-    "errors_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors",
-    "events_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/events",
-    "html_url": "https://bugsnag.com/dashboard/website",
-    "url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004"
-  }
-]
+{
+  "total_count": 123,
+  "items": [
+    {
+      "id": "50baed119bf39c1431000004",
+      "name": "Website",
+      "slug": "website",
+      "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
+      "errors": 78,
+      "icon": "https://bugsnag.com/assets/frameworks/rails.png",
+      "release_stages": ["production", "development"],
+      "type": "rails",
+      "created_at": "2012-12-02T05:54:25Z",
+      "updated_at": "2013-06-17T19:57:49Z",
+      "errors_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors",
+      "events_url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004/events",
+      "html_url": "https://bugsnag.com/dashboard/website",
+      "url": "https://api.bugsnag.com/projects/50baed119bf39c1431000004"
+    }
+  ]
+}
 ```
 
 
@@ -121,6 +133,7 @@ Status: 200 OK
 {
   "id": "50baed119bf39c1431000004",
   "name": "Website",
+  "slug": "website",
   "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
   "errors": 78,
   "icon": "https://bugsnag.com/assets/frameworks/rails.png",
@@ -161,6 +174,7 @@ Status: 201 Created
 {
   "id": "50baed119bf39c1431000004",
   "name": "Website",
+  "slug": "website",
   "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
   "errors": 78,
   "icon": "https://bugsnag.com/assets/frameworks/rails.png",
@@ -201,6 +215,7 @@ Status: 200 OK
 {
   "id": "50baed119bf39c1431000004",
   "name": "Website",
+  "slug": "website",
   "api_key": "a0f5e56c125d2eeac31fd66e4f0cbd79",
   "errors": 78,
   "icon": "https://bugsnag.com/assets/frameworks/rails.png",
