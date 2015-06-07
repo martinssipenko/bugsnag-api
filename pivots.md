@@ -42,16 +42,16 @@ Status: 200 OK
 {
   "total_count": 2,
   "items": [{
-      "name": "Hosts",
       "field": "device.hostname",
+      "name": "Hosts",
       "summary": [{
           "value": "app1.ec3.bugsnag.com",
           "events": 123,
           "proportion": 0.75
       }]
   }, {
-      "name": "Release Stages",
       "field": "app.release_stage",
+      "name": "Release Stages",
       "summary": [{
           "value": "production",
           "events": 123,
@@ -89,8 +89,7 @@ Status: 200 OK
   "items": [{
       "field": "device.hostname",
       "name": "Hosts",
-      "total_count": 11,
-      "items": [{
+      "summary": [{
           "value": "app1.ec3.bugsnag.com",
           "events": 123,
           "proportion": 0.75
@@ -98,8 +97,7 @@ Status: 200 OK
   }, {
       "field": "app.release_stage",
       "name": "Release Stages",
-      "total_count": 3,
-      "items": [{
+      "summary": [{
           "value": "production",
           "events": 123,
           "proportion": 0.1
