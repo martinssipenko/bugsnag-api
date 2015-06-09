@@ -44,6 +44,9 @@ Name            | Description
 
 ### Response Example
 
+```http
+Status: 200 OK
+```
 ```json
 [
   {
@@ -110,6 +113,9 @@ Name            | Description
 
 ### Response Example
 
+```http
+Status: 200 OK
+```
 ```json
 [
   {
