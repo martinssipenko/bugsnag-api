@@ -21,7 +21,7 @@ Contents
 List a Project's Filters
 ------------------------
 
-Get a list of all fields which are available for filtering.
+Get a list of all fields which are available for filtering. Some fields will include a fixed list of possible field values which can be used for autocomplete.
 
 
 ### Request
@@ -30,19 +30,48 @@ Get a list of all fields which are available for filtering.
 GET /project/:project_id/filters
 ```
 
-### Response
+
+### Response Fields
+
+Name            | Description
+----------------|-------------
+`field`         | The filter's field ID
+`name`          | A friendly name for the filter
+`description`   | A description for the filter
+`values`        | Optional. A fixed list of values for this filter
+
+
+### Response Example
 
 ```json
 [
   {
     "field": "error.status",
     "name": "error status",
-    "description": "open, in progress, fixed…"
+    "description": "open, in progress, fixed…",
+    "values": [
+      {
+        "id": "open",
+        "name": "Open"
+      }, {
+        "id": "in progress",
+        "name": "In Progress"
+      }, {
+        "id": "fixed",
+        "name": "Fixed"
+      }, {
+        "id": "snoozed",
+        "name": "Snoozed"
+      }, {
+        "id": "ignored",
+        "name": "Ignored"
+      }
+    ]
   },
   {
-    "field": "error.has_issue",
-    "name": "has issue",
-    "description": "has an issue attached"
+    "field": "app.release_stage",
+    "name": "release stage",
+    "description": "production, development, etc"
   }
 ]
 ```
@@ -57,7 +86,7 @@ Get a list of possible matches, ordered by frequency of events, for the given Pr
 ### Request
 
 ```http
-GET /project/:project_id/filters/error.status
+GET /project/:project_id/filters/:filter_field
 ```
 
 
@@ -69,16 +98,30 @@ q         | Partial or full query to find filter matches for
 count     | Number of results to return. Default: `5`
 
 
-### Response
+### Response Fields
 
-TODO
+Name            | Description
+----------------|-------------
+`id`            | The value to send with queries
+`name`          | Optional. A friendly display name for value
+`description`   | Optional. An additional description for the value
+
+
+### Response Example
 
 ```json
 [
   {
-    "id": "",
-    "name": "",
-    "description": ""
+    "id": "me",
+    "name": "Me"
+  },
+  {
+    "id": "anyone",
+    "name": "Anyone"
+  },
+  {
+    "id": "515fb9337c1074f6fd000007",
+    "name": "James Smith"
   }
 ]
 ```
@@ -86,6 +129,8 @@ TODO
 
 Default fields
 --------------
+
+Depending on your Project type, there are numerous fields available by default on your Project:
 
 ### All project types
 
