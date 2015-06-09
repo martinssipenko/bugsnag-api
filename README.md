@@ -21,11 +21,13 @@ Contents
 -   [Ruby Library](#ruby-library)
 -   Resources
     -   [Accounts](accounts.md)
-    -   [Users](users.md)
-    -   [Projects](projects.md)
+    -   [Activity Items](activity-items.md)
+    -   [Comments](comments.md)
     -   [Errors](errors.md)
     -   [Events](events.md)
-    -   [Comments](comments.md)
+    -   [Pivots](pivots.md)
+    -   [Projects](projects.md)
+    -   [Users](users.md)
 
 
 Schema
