@@ -161,7 +161,7 @@ Field             | Description                                 | Format
 error.status      | Errors with the given status                | `open`, `in progress`, `snoozed`, `fixed`, `ignored`
 error.has_issue   | Errors with issue attached/not attached     | `true`, `false`
 error.assigned_to | Errors with a Bugsnag user assigned         | *User ID* or `me`, `anyone`
-event.after       | Events after the given time                 | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
+event.since       | Events since the given time                 | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
 event.before      | Events before the given time                | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
 event.class       | Events with the given class                 | *Fuzzy-match string*
 event.message     | Events with the given message               | *Fuzzy-match string*
