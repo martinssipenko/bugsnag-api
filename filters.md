@@ -145,7 +145,6 @@ Since GET request parameters must be encoded into the URL, we require that this 
 
 ```
 filters[event.since]=1h&filters[error.status][]=fixed&filters[error.status][]=snoozed&filters[event.class]=timeout
-
 ```
 
 
