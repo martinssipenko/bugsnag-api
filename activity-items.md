@@ -51,8 +51,8 @@ Name             | Description
 `issue_unlinked` | The issue attached to this error was unlinked
 
 
-List an Error's Activity
-------------------------
+List an Error's Activity Items
+------------------------------
 
 Get a list of all Activity Items for the specified Bugsnag [Error](errors.md).
 
