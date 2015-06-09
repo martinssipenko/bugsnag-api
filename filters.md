@@ -43,8 +43,7 @@ GET /project/:project_id/filters
     "field": "error.has_issue",
     "name": "has issue",
     "description": "has an issue attached"
-  },
-  ...
+  }
 ]
 ```
 
