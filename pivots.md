@@ -39,6 +39,7 @@ Status: 200 OK
   {
     "field": "device.hostname",
     "name": "Hosts",
+    "cardinality": 123,
     "summary": [{
       "value": "app1.ec3.bugsnag.com",
       "events": 123,
@@ -47,6 +48,7 @@ Status: 200 OK
   }, {
     "field": "app.release_stage",
     "name": "Release Stages",
+    "cardinality": 456,
     "summary": [{
       "value": "production",
       "events": 123,
