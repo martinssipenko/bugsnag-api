@@ -1,25 +1,39 @@
 Comments API
 ============
 
-> TODO:JS: this needs to support both comments and activity
-
-The Comments API allows you to get detailed information and delete comments on Bugsnag [Errors](errors.md).
+The Comments API allows you to list comments that Bugsnag [Users](users.md) have left on [Errors](errors.md). You can also create new Comments or editing/delete existing Comments.
 
 
 Contents
 --------
+-   [The Comment object](#the-comment-object)
+-   [List an Error's Comments](#list-an-error-s-comments)
+-   [Get Comment details](#get-comment-details)
+-   [Create a Comment](#create-a-comment)
+-   [Update a Comment](#update-a-comment)
+-   [Delete a Comment](#delete-a-comment)
 
-- [List an Error's Comments](#list-an-error-s-comments)
-- [Get Comment details](#get-comment-details)
-- [Create a Comment](#create-a-comment)
-- [Update a Comment](#update-a-comment)
-- [Delete a Comment](#delete-a-comment)
+
+The Comment object
+------------------
+
+The following fields are present on Comment responses:
+
+Name              | Description
+----------------- | -----------
+`id`              | The ID of this Comment, eg *515fb9337c1074f6fd000009*
+`message`         | The message contents for this Comment
+`user`            | A [User](user.md) object representing the User who created this Comment
+`url`             | The API URL to fetch this Comment resource
+`created_at`      | When this Comment was created, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format
 
 
 List an Error's Comments
 ------------------------
 
 Get a list of all comments for the specified Bugsnag [Error](errors.md).
+
+### Request
 
 ```http
 GET /errors/:error_id/comments
@@ -33,7 +47,7 @@ Name        | Description
 `direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`  | How many results to return per page. Default: `30`
 
-### Response
+### Response Example
 
 ```http
 Status: 200 OK

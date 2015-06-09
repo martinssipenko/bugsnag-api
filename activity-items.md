@@ -1,27 +1,24 @@
 Activity Items API
 ==================
 
-The Activity Items API allows you to get a feed of user and system actions for each [Error](error.md), eg. status changes and assignments.
+The Activity Items API allows you to get a feed of User and/or system actions for each [Error](error.md), for example,  status changes, user assignments and issue creation. See [action types](#action-types) for a full list of the types of Activity Item which may be returned.
 
 
 Contents
 --------
 -   [The Activity Item object](#the-activity-item-object)
-    -   [Fields](#fields)
-    -   [Actions](#actions)
+    -   [Action types](#action-types)
 -   [List an Error's Activity Items](#list-an-error-s-activity-items)
 
 
 The Activity Item object
 ------------------------
 
-### Fields
-
-The following fields are present on Activity Item responses.
+The following fields are present on Activity Item responses:
 
 Name                | Description
 ------------------- | -----------
-`action`            | The type of activity that occurred, eg `commented`, `snoozed` (see [actions](#actions) for the full list)
+`action`            | The type of activity that occurred, eg `commented`, `snoozed`. See [action types](#action-types) for the full list.
 `actor`             | The user who performed the action, or "system" if this was a system action
 `created_at`        | When this activity occurred, in [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) format
 `snooze_conditions` | Only for `snooze` actions. The conditions for snoozing this Error. For example: `{"dimension": "time", "target": "2013-08-06T00:24:50Z", "input": 21600}`
@@ -30,7 +27,7 @@ Name                | Description
 `issue_url`         | Only for `issue_created` and `issue_linked` actions. The URL of the linked issue.
 
 
-### Actions
+### Action Types
 
 The following are valid actions which may be returned in the `action` field of a response.
 
