@@ -1,10 +1,6 @@
 Events API
 ==========
 
-> TODO:JS: describe how to filter Events, Errors and Pivots
-
-> TODO:JS: allow specifying which fields to return
-
 Bugsnag represents individual crashes (typically an exception in your applications) as what we call *Events*. The Events API allows you to get information about and delete Bugsnag Events.
 
 
@@ -33,8 +29,7 @@ Name        | Description
 `sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
 `direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`  | How many results to return per page. Default: `10`
-`start_time`| Start time for the query. Optional, ISO 8601 format ("2013-10-23T15:23:34Z").
-`end_time`  | End time for the query. Optional, ISO 8601 format ("2013-10-24T15:23:34Z").
+`filters`   | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
 ### Response
 
@@ -90,8 +85,7 @@ Name        | Description
 `sort`      | What to sort results by. Can be only `created_at`. Default: `created_at`
 `direction` | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`  | How many results to return per page. Default: `10`
-`start_time`| Start time for the query. Optional, ISO 8601 format ("2013-10-23T15:23:34Z").
-`end_time`  | End time for the query. Optional, ISO 8601 format ("2013-10-24T15:23:34Z").
+`filters`   | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
 ### Response
 

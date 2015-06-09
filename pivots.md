@@ -1,10 +1,6 @@
 Pivots API
 ==========
 
-> TODO:JS: describe how to filter Events, Errors and Pivots
-
-> TODO:JS: allow specifying which fields to return
-
 The Pivots API allows you to [pivot](http://en.wikipedia.org/wiki/Pivot_table) on Event fields, allowing you to group similar Events and explore their impact. For example, you may wish to see a breakdown of events grouped by release stage (eg. "production" vs "development"), or grouped by application version (eg. 1.2.0 vs 1.3.0).
 
 
@@ -30,7 +26,7 @@ GET /projects/:project_id/pivots
 
 Name           | Description
 -------------- | -----------
-`filters`      | TODO
+`filters`      | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 `summary_size` | How many values to show in the summary. Default: `5`
 
 ### Response
@@ -74,7 +70,7 @@ GET /errors/:error_id/pivots
 
 Name           | Description
 -------------- | -----------
-`filters`      | TODO
+`filters`      | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 `summary_size` | How many values to show in the summary. Default: `5`
 
 ### Response
@@ -116,9 +112,9 @@ GET /projects/:project_id/pivots/:pivot_field
 
 ### Parameters
 
-Name        | Description
------------ | -----------
-`filters`   | TODO
+Name           | Description
+-------------- | -----------
+`filters`      | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
 ### Response
 
@@ -153,9 +149,9 @@ GET /errors/:error_id/pivots/:pivot_field
 
 ### Parameters
 
-Name        | Description
------------ | -----------
-`filters`   | TODO
+Name           | Description
+-------------- | -----------
+`filters`      | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
 ### Response
 

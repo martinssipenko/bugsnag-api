@@ -1,10 +1,6 @@
 Errors API
 ============
 
-> TODO:JS: describe how to filter Events, Errors and Pivots
-
-> TODO:JS: allow specifying which fields to return
-
 Bugsnag represents groups of similar exceptions as what we call *Errors*. The Errors API allows you to update, delete and get detailed information about Bugsnag Errors.
 
 
@@ -30,14 +26,10 @@ GET /projects/:project_id/errors
 
 Name             | Description
 ---------------- | -----------
-`release_stages` | Only errors on the given release stages are returned, eg `production` or `production,staging`
-`app_versions`   | Only errors affecting the given app versions are returned, eg `eq1.0.0` (errors affecting 1.0.0), `gte1.0.1` (errors affecting >= 1.0.1)
-`severity`       | Only errors with the given severities are returned, eg `error` or `error,warning`
-`status`         | Only errors with the given status are returned, eg `open`
 `sort`           | What to sort results by. Can be only `updated_at`. Default: `updated_at`
 `direction`      | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
 `per_page`       | How many results to return per page. Default: `30`
-`most_recent_event` | Include the most recent event for every error in the response
+`filters`        | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
 ### Response
 

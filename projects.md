@@ -3,8 +3,6 @@ Projects API
 
 > TODO:JS: return "2-week trend" data
 
-> TODO:JS: allow specifying which fields to return
-
 The Projects API allows you to create, modify, delete and get detailed information about Bugsnag projects. Projects represent individual applications on your Bugsnag account for which you are tracking errors.
 
 
