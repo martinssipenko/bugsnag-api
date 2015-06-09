@@ -153,6 +153,8 @@ Since GET request parameters must be encoded into the URL, we require that this 
 filters[event.since]=1h&filters[error.status][]=fixed&filters[error.status][]=snoozed&filters[event.class]=timeout
 ```
 
+For each filter type you can pass in either multiple values (as an Array) or a single value (as a String), when multiple filter values are received for a filter, they are combined using *OR* logic.
+
 
 Default fields
 --------------
@@ -165,7 +167,7 @@ Field             | Description                                 | Format
 ------------------|---------------------------------------------|-------------------------------------
 error.status      | Errors with the given status                | `open`, `in progress`, `snoozed`, `fixed`, `ignored`
 error.has_issue   | Errors with issue attached/not attached     | `true`, `false`
-error.assigned_to | Errors with a Bugsnag user assigned         | *User ID* or `me`, `anyone`
+error.assigned_to | Errors with a Bugsnag user assigned         | *User ID* or `me`, `anyone`, `noone`
 event.since       | Events since the given time                 | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
 event.before      | Events before the given time                | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
 event.class       | Events with the given class                 | *Fuzzy-match string*
