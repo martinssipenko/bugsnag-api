@@ -39,26 +39,25 @@ Name           | Description
 Status: 200 OK
 ```
 ```json
-{
-  "total_count": 2,
-  "items": [{
-      "field": "device.hostname",
-      "name": "Hosts",
-      "summary": [{
-          "value": "app1.ec3.bugsnag.com",
-          "events": 123,
-          "proportion": 0.75
-      }]
+[
+  {
+    "field": "device.hostname",
+    "name": "Hosts",
+    "summary": [{
+      "value": "app1.ec3.bugsnag.com",
+      "events": 123,
+      "proportion": 0.75
+    }]
   }, {
-      "field": "app.release_stage",
-      "name": "Release Stages",
-      "summary": [{
-          "value": "production",
-          "events": 123,
-          "proportion": 0.1
-      }]
-  }]
-}
+    "field": "app.release_stage",
+    "name": "Release Stages",
+    "summary": [{
+      "value": "production",
+      "events": 123,
+      "proportion": 0.1
+    }]
+  }
+]
 ```
 
 
@@ -84,26 +83,25 @@ Name           | Description
 Status: 200 OK
 ```
 ```json
-{
-  "total_count": 2,
-  "items": [{
-      "field": "device.hostname",
-      "name": "Hosts",
-      "summary": [{
-          "value": "app1.ec3.bugsnag.com",
-          "events": 123,
-          "proportion": 0.75
-      }]
+[
+  {
+    "field": "device.hostname",
+    "name": "Hosts",
+    "summary": [{
+      "value": "app1.ec3.bugsnag.com",
+      "events": 123,
+      "proportion": 0.75
+    }]
   }, {
-      "field": "app.release_stage",
-      "name": "Release Stages",
-      "summary": [{
-          "value": "production",
-          "events": 123,
-          "proportion": 0.1
-      }]
-  }]
-}
+    "field": "app.release_stage",
+    "name": "Release Stages",
+    "summary": [{
+      "value": "production",
+      "events": 123,
+      "proportion": 0.1
+    }]
+  }
+]
 ```
 
 
@@ -129,21 +127,18 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/projects/70baea119bf39c1431000004/pivots?offset=50baee27a43ccdf778000002>; rel="next"
 ```
 ```json
-{
-  "total_count": 10,
-  "items": [
-    {
-      "field": "app.release_stage",
-      "name": "Release Stages",
-      "total_count": 3,
-      "items": [{
-          "value": "production",
-          "events": 123,
-          "proportion": 0.1
-      }]
-    }
-  ]
-}
+[
+  {
+    "field": "app.release_stage",
+    "name": "Release Stages",
+    "total_count": 3,
+    "items": [{
+      "value": "production",
+      "events": 123,
+      "proportion": 0.1
+    }]
+  }
+]
 ```
 
 
@@ -169,19 +164,16 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/errors/70baea119bf39c1431000004/pivots?offset=50baee27a43ccdf778000002>; rel="next"
 ```
 ```json
-{
-  "total_count": 10,
-  "items": [
-    {
-      "field": "app.release_stage",
-      "name": "Release Stages",
-      "total_count": 3,
-      "items": [{
-          "value": "production",
-          "events": 123,
-          "proportion": 0.1
-      }]
-    }
-  ]
-}
+[
+  {
+    "field": "app.release_stage",
+    "name": "Release Stages",
+    "total_count": 3,
+    "items": [{
+        "value": "production",
+        "events": 123,
+        "proportion": 0.1
+    }]
+  }
+]
 ```

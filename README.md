@@ -93,6 +93,12 @@ All API resources may have one or more `*_url` properties linking to other resou
 Pagination
 ----------
 
+A count of the total number of resources available for pagination is available using the `X-Total-Count` header, for example:
+
+```http
+X-Total-Count: 1234
+```
+
 Pagination info is included in the [Link header](http://tools.ietf.org/html/rfc5988). It is important to follow these Link header values instead of constructing your own URLs since the pagination method can differ between resources.
 
 The URL for pagination is shown inside angled brackets, and the type of pagination link is described in the `rel` field:

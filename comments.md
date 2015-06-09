@@ -40,28 +40,25 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/errors/50baed119bf39c1431000004/comments?offset=51f93d6af002c6686d058c49>; rel="next"
 ```
 ```json
-{
-  "total_count": 123,
-  "items": [
-    {
-      "id": "520042527c1074dced000017",
-      "message": "This was my bug, fixed now",
-      "user": {
-        "account_admin": true,
-        "email": "james@example.com",
-        "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
-        "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
-        "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
-        "id": "515fb9337c1074f6fd000007",
-        "name": "James Smith",
-        "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
-        "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
-      },
-      "url": "https://api.bugsnag.com/comments/520042527c1074dced000017",
-      "created_at": "2013-08-06T00:24:50Z"
-    }
-  ]
-}
+[
+  {
+    "id": "520042527c1074dced000017",
+    "message": "This was my bug, fixed now",
+    "user": {
+      "account_admin": true,
+      "email": "james@example.com",
+      "gravatar_id": "b05c5ca80cf9fe757efdaa9e2afe4a76",
+      "gravatar_url": "https://secure.gravatar.com/avatar/b05c5ca80cf9fe757efdaa9e2afe4a76",
+      "html_url": "https://bugsnag.com/accounts/example/users/james-smith/edit",
+      "id": "515fb9337c1074f6fd000007",
+      "name": "James Smith",
+      "projects_url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007/projects",
+      "url": "https://api.bugsnag.com/users/515fb9337c1074f6fd000007"
+    },
+    "url": "https://api.bugsnag.com/comments/520042527c1074dced000017",
+    "created_at": "2013-08-06T00:24:50Z"
+  }
+]
 ```
 
 

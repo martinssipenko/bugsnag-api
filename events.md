@@ -43,37 +43,34 @@ Status: 200 OK
 Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/events?offset=51f93d6af002c6686d058c49>; rel="next"
 ```
 ```json
-{
-  "total_count": 123,
-  "items": [
-    {
-      "id": "51f5d152f002c6686d013a22",
-      "exceptions": [
-        {
-          "class": "ActionView::Template::Error",
-          "message": "source sequence is illegal/malformed utf-8",
-          "stacktrace": [
-            {
-              "line": 285,
-              "column": 20,
-              "file": "app/models/user.rb",
-              "method": "generate"
-            },
-          ]
-        },
-      ],
-      "user_id": "user@yoursite.com",
-      "received_at": "2012-12-02T05:54:25Z",
-      "severity": "error",
-      "context": "events#show",
-      "app_version": "1.0.1",
-      "os_version": "Windows Vista",
-      "meta_data": { ... },
-      "url": "https://api.bugsnag.com/events/51f5d152f002c6686d013a22",
-      "html_url": "https://bugsnag.com/errors/51f5cbadcf4cfd7373c8cc2d/events/51f5d152f002c6686d013a22"
-    }
-  ]
-}
+[
+  {
+    "id": "51f5d152f002c6686d013a22",
+    "exceptions": [
+      {
+        "class": "ActionView::Template::Error",
+        "message": "source sequence is illegal/malformed utf-8",
+        "stacktrace": [
+          {
+            "line": 285,
+            "column": 20,
+            "file": "app/models/user.rb",
+            "method": "generate"
+          },
+        ]
+      },
+    ],
+    "user_id": "user@yoursite.com",
+    "received_at": "2012-12-02T05:54:25Z",
+    "severity": "error",
+    "context": "events#show",
+    "app_version": "1.0.1",
+    "os_version": "Windows Vista",
+    "meta_data": { ... },
+    "url": "https://api.bugsnag.com/events/51f5d152f002c6686d013a22",
+    "html_url": "https://bugsnag.com/errors/51f5cbadcf4cfd7373c8cc2d/events/51f5d152f002c6686d013a22"
+  }
+]
 ```
 
 
@@ -103,37 +100,34 @@ Status: 200 OK
 Link: <http://api.bugsnag.com/projects/515fbcfc7c1074a459000001/events?desc=id&offset=51ac4eef95f3b06728000afc&per_page=1>; rel="next"
 ```
 ```json
-{
-  "total_count": 123,
-  "items": [
-    {
-      "id": "51f5d152f002c6686d013a22",
-      "exceptions": [
-        {
-          "class": "ActionView::Template::Error",
-          "message": "source sequence is illegal/malformed utf-8",
-          "stacktrace": [
-            {
-              "line": 285,
-              "column": 20,
-              "file": "app/models/user.rb",
-              "method": "generate"
-            },
-          ]
-        },
-      ],
-      "user_id": "user@yoursite.com",
-      "received_at": "2012-12-02T05:54:25Z",
-      "severity": "error",
-      "context": "events#show",
-      "app_version": "1.0.1",
-      "os_version": "Windows Vista",
-      "meta_data": { ... },
-      "url": "https://api.bugsnag.com/events/51f5d152f002c6686d013a22",
-      "html_url": "https://bugsnag.com/errors/51f5cbadcf4cfd7373c8cc2d/events/51f5d152f002c6686d013a22"
-    }
-  ]
-}
+[
+  {
+    "id": "51f5d152f002c6686d013a22",
+    "exceptions": [
+      {
+        "class": "ActionView::Template::Error",
+        "message": "source sequence is illegal/malformed utf-8",
+        "stacktrace": [
+          {
+            "line": 285,
+            "column": 20,
+            "file": "app/models/user.rb",
+            "method": "generate"
+          },
+        ]
+      },
+    ],
+    "user_id": "user@yoursite.com",
+    "received_at": "2012-12-02T05:54:25Z",
+    "severity": "error",
+    "context": "events#show",
+    "app_version": "1.0.1",
+    "os_version": "Windows Vista",
+    "meta_data": { ... },
+    "url": "https://api.bugsnag.com/events/51f5d152f002c6686d013a22",
+    "html_url": "https://bugsnag.com/errors/51f5cbadcf4cfd7373c8cc2d/events/51f5d152f002c6686d013a22"
+  }
+]
 ```
 
 
