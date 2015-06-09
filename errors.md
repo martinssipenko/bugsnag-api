@@ -61,8 +61,7 @@ Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors?offset=1
     "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
     "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
     "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "most_recent_event": {}
+    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
   }
 ]
 ```
@@ -76,12 +75,6 @@ Get the details of the given Bugsnag Error.
 ```http
 GET /errors/:error_id
 ```
-
-### Parameters
-
-Name             | Description
----------------- | -----------
-`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -111,8 +104,7 @@ Status: 200 OK
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
   "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
   "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "most_recent_event": {}
+  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
 }
 ```
 
@@ -131,7 +123,6 @@ PATCH /errors/:error_id
 Name       | Description
 ---------- | -----------
 `resolved` | The new status for this error, can be either `true` or `false`
-`most_recent_event` | Include the most recent event for every error in the response
 
 ### Response
 
@@ -161,8 +152,7 @@ Status: 200 OK
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
   "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
   "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "most_recent_event": {}
+  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
 }
 ```
 
