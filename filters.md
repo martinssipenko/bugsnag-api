@@ -9,6 +9,7 @@ Contents
 
 -   [List a Project's Filters](#list-a-project-s-filters)
 -   [List matches for a Filter](#list-matches-for-a-filter)
+-   [Filtering Errors, Events or Pivots](#filtering-errors-events-or-pivots)
 -   [Default fields](#default-fields)
     -   [All project types](#all-project-types)
     -   [Projects using deploy tracking](#projects-using-deploy-tracking)
@@ -35,7 +36,7 @@ GET /project/:project_id/filters
 
 Name            | Description
 ----------------|-------------
-`field`         | The filter's field ID
+`field`         | The filter's field ID, used when [filtering queries](#filtering-errors-events-or-pivots)
 `name`          | A friendly name for the filter
 `description`   | A description for the filter
 `values`        | Optional. A fixed list of values for this filter
@@ -80,7 +81,7 @@ Name            | Description
 List matches for a Filter
 -------------------------
 
-Get a list of possible matches, ordered by frequency of events, for the given Project and filter field. This could be used to provide suggested filter matches in an autocomplete-like input.
+Get a list of possible matches, for the given Project and filter field. This could be used to provide suggested filter matches in an autocomplete-like input.
 
 
 ### Request
@@ -102,7 +103,7 @@ count     | Number of results to return. Default: `5`
 
 Name            | Description
 ----------------|-------------
-`id`            | The value to send with queries
+`id`            | The value to send when [filtering queries](#filtering-errors-events-or-pivots)
 `name`          | Optional. A friendly display name for value
 `description`   | Optional. An additional description for the value
 
@@ -127,6 +128,27 @@ Name            | Description
 ```
 
 
+Filtering Errors, Events or Pivots
+----------------------------------
+
+API requests to [Error](error.md), [Event](event.md) and [Pivot](pivot.md) endpoints can be filtered to help you better understand the health of your application. Any request which supports filtering can be filtered by sending a `filters` parameter:
+
+```json
+"filters": [
+  "event.since": "1h",
+  "error.status": ["fixed", "snoozed"],
+  "event.class": "timeout"
+]
+```
+
+Since GET request parameters must be encoded into the URL, we require that this filter object be encoded in jQuery/PHP style parameter format. For example, using jQuery's [$.param](http://api.jquery.com/jquery.param/) function:
+
+```
+filters[event.since]=1h&filters[error.status][]=fixed&filters[error.status][]=snoozed&filters[event.class]=timeout
+
+```
+
+
 Default fields
 --------------
 
@@ -139,7 +161,7 @@ Field             | Description                                 | Format
 error.status      | Errors with the given status                | `open`, `in progress`, `snoozed`, `fixed`, `ignored`
 error.has_issue   | Errors with issue attached/not attached     | `true`, `false`
 error.assigned_to | Errors with a Bugsnag user assigned         | *User ID* or `me`, `anyone`
-event.since       | Events since the given time                 | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
+event.after       | Events after the given time                 | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
 event.before      | Events before the given time                | *ISO8601* or `1h`,`3h`,`1d`,`7d`,`30d`
 event.class       | Events with the given class                 | *Fuzzy-match string*
 event.message     | Events with the given message               | *Fuzzy-match string*

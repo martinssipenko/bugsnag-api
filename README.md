@@ -25,6 +25,7 @@ Contents
     -   [Comments](comments.md)
     -   [Errors](errors.md)
     -   [Events](events.md)
+    -   [Filters](filters.md)
     -   [Pivots](pivots.md)
     -   [Projects](projects.md)
     -   [Users](users.md)
