@@ -1,7 +1,7 @@
 Activity Items API
 ==================
 
-The Activity API allows you to get a feed of user and system actions for each [Error](error.md), eg. status changes and assignments.
+The Activity Items API allows you to get a feed of user and system actions for each [Error](error.md), eg. status changes and assignments.
 
 
 Contents
@@ -54,13 +54,13 @@ Name             | Description
 List an Error's Activity
 ------------------------
 
-Get a list of all activity for the specified Bugsnag [Error](errors.md).
+Get a list of all Activity Items for the specified Bugsnag [Error](errors.md).
 
 
 ### Request
 
 ```http
-GET /errors/:error_id/activity
+GET /errors/:error_id/activity_items
 ```
 
 
@@ -77,7 +77,7 @@ Name        | Description
 
 ```http
 Status: 200 OK
-Link: <https://api.bugsnag.com/errors/50baed119bf39c1431000004/comments?offset=51f93d6af002c6686d058c49>; rel="next"
+Link: <https://api.bugsnag.com/errors/50baed119bf39c1431000004/activity_items?offset=51f93d6af002c6686d058c49>; rel="next"
 ```
 ```json
 [
