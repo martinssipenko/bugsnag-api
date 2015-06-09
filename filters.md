@@ -134,11 +134,11 @@ Filtering Errors, Events or Pivots
 API requests to [Error](error.md), [Event](event.md) and [Pivot](pivot.md) endpoints can be filtered to help you better understand the health of your application. Any request which supports filtering can be filtered by sending a `filters` parameter:
 
 ```json
-"filters": [
+"filters": {
   "event.since": "1h",
   "error.status": ["fixed", "snoozed"],
   "event.class": "timeout"
-]
+}
 ```
 
 Since GET request parameters must be encoded into the URL, we require that this filter object be encoded in jQuery/PHP style parameter format. For example, using jQuery's [$.param](http://api.jquery.com/jquery.param/) function:
