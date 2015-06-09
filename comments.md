@@ -52,6 +52,7 @@ Name        | Description
 ```http
 Status: 200 OK
 Link: <https://api.bugsnag.com/errors/50baed119bf39c1431000004/comments?offset=51f93d6af002c6686d058c49>; rel="next"
+X-Total-Count: 123
 ```
 ```json
 [

@@ -121,6 +121,7 @@ Name           | Description
 ```http
 Status: 200 OK
 Link: <https://api.bugsnag.com/projects/70baea119bf39c1431000004/pivots?offset=50baee27a43ccdf778000002>; rel="next"
+X-Total-Count: 123
 ```
 ```json
 [
@@ -158,6 +159,7 @@ Name           | Description
 ```http
 Status: 200 OK
 Link: <https://api.bugsnag.com/errors/70baea119bf39c1431000004/pivots?offset=50baee27a43ccdf778000002>; rel="next"
+X-Total-Count: 123
 ```
 ```json
 [
