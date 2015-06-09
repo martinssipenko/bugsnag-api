@@ -93,10 +93,10 @@ GET /project/:project_id/filters/:filter_field
 
 ### Params
 
-Name      | Description
-----------|------------
-q         | Partial or full query to find filter matches for
-count     | Number of results to return. Default: `5`
+Name        | Description
+------------|------------
+q           | Partial or full query to find filter matches for
+result_size | Number of results to return. Default: `5`
 
 
 ### Response Fields
