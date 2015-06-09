@@ -13,7 +13,7 @@ Contents
 - [Get Pivot values on an Error](#get-pivot-values-on-an-error)
 
 
-List Pivot fields on a Pro ject
+List Pivot fields on a Project
 ------------------------------
 
 Get a list of all the Pivot fields available on the given [Project](project.md), along with a summary of the top pivot values.
