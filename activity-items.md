@@ -21,7 +21,7 @@ Name                | Description
 `action`            | The type of activity that occurred, eg `commented`, `snoozed`. See [action types](#action-types) for the full list.
 `actor`             | The user who performed the action, or "system" if this was a system action
 `created_at`        | When this activity occurred, in [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) format
-`snooze_conditions` | Only for `snooze` actions. The conditions for snoozing this Error.<br>`{"dimension": "count", "target": 1234, "input": 100}`<br>`{"dimension": "rate", "target": 100, "input": 100}`<br>`{"dimension": "time", "target": "2013-08-06T00:24:50Z", "input": 21600}`
+`snooze_conditions` | Only for `snooze` actions. The conditions for snoozing this Error.<br>`{"dimension": "occurrences", "target": 1234, "input": 100}`<br>`{"dimension": "rate", "target": 100, "input": 100}`<br>`{"dimension": "time", "target": "2013-08-06T00:24:50Z", "input": 21600}`
 `assignee`          | Only for the `assigned` action. The user who was assigned this Error.
 `issue_tracker`     | Only for `issue_created` and `issue_linked` actions. The issue tracker name.
 `issue_url`         | Only for `issue_created` and `issue_linked` actions. The URL of the linked issue.
