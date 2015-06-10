@@ -22,7 +22,7 @@ Name                | Description
 `actor`             | The user who performed the action, or "system" if this was a system action
 `created_at`        | When this activity occurred, in [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) format
 `snooze_conditions` | Only for `snooze` actions. The conditions for snoozing this Error.<br>`{"dimension": "count", "target": 1234, "input": 100}`<br>`{"dimension": "rate", "target": 100, "input": 100}`<br>`{"dimension": "time", "target": "2013-08-06T00:24:50Z", "input": 21600}`
-`assignee`          | Only for `assigned` and `reassigned` actions. The user who was assigned this Error.
+`assignee`          | Only for the `assigned` action. The user who was assigned this Error.
 `issue_tracker`     | Only for `issue_created` and `issue_linked` actions. The issue tracker name.
 `issue_url`         | Only for `issue_created` and `issue_linked` actions. The URL of the linked issue.
 
@@ -41,7 +41,6 @@ Name             | Description
 `unignored`      | The *ignored* status was removed from this error, by a user action
 `first_seen`     | This error was seen for the first time
 `assigned`       | The error was assigned to a Bugsnag user
-`resassigned`    | The associated error was assigned to a different Bugsnag user
 `unassigned`     | The associated error was un-assigned
 `issue_created`  | An issue was created in your issue tracker for this error
 `issue_linked`   | An existing issue from your issues tracker was linked to this error
