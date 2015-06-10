@@ -33,42 +33,6 @@ Name                | Description
 `trend`             | 2-week trend information TODO
 
 
-{
-  "id": "518031bcd775355c48a1cd4e",
-  "events": 456,
-  "users": 123,
-  "first_seen": "2013-04-30T21:03:56Z",
-  "last_seen": "2013-04-30T21:03:56Z",
-  "status": "snoozed",
-  "snooze_conditions": {
-    "dimension": "time",
-    "target": "2013-04-30T21:03:56Z",
-    "input": 21600
-  }
-  "assigned_user": {
-    "id": "518031bcd775355c48a1cd4e",
-    "name": "TODO"
-  },
-  "linked_issue": {
-    "id": 123,
-    "url": "http://google.com",
-    "system": "GitHub Issues"
-  },
-  "trend": [
-    ["2015-05-27T00:00:00.000Z", 123],
-    ["2015-05-27T00:00:00.000Z", 456]
-  ],
-  "latest_event": {
-    "id": "551c5888093024ce168bdfca",
-    "error_class": "Moped::Errors::QueryFailure",
-    "message": "Something bad happened",
-    "context": "api/accounts#index",
-    "release_stage": "production",
-    "severity": "error"
-  }
-}
-
-
 List a Project's Errors
 -----------------------
 
