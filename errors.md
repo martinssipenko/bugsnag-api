@@ -13,14 +13,74 @@ Contents
 - [Delete an Error](#delete-an-error)
 
 
+The Error object
+----------------
+
+The following fields are present on Error responses:
+
+Name                | Description
+--------------------| -----------
+`id`                | The ID of this error, eg *515fb9337c1074f6fd000009*
+`events`            | The number of occurrences of this error (respects filters)
+`users`             | The number of users who saw this error (respects filters)
+`first_seen`        | When this error was first seen, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
+`last_seen`         | When this error was last seen, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
+`status`            | The current status of this error (`open`, `snoozed`, `fixed` or `ignored`)
+`snooze_conditions` | Only in `snoozed` status. The conditions for snoozing this error.
+`assigned_user`     | The Bugsnag User (if any) who has been assigned this error
+`linked_issue`      | The external issue (if any) in your issue tracker linked to this error
+`latest_event`      | The most recent Event seen for this error (respects filters)
+`trend`             | 2-week trend information TODO
+
+
+{
+  "id": "518031bcd775355c48a1cd4e",
+  "events": 456,
+  "users": 123,
+  "first_seen": "2013-04-30T21:03:56Z",
+  "last_seen": "2013-04-30T21:03:56Z",
+  "status": "snoozed",
+  "snooze_conditions": {
+    "dimension": "time",
+    "target": "2013-04-30T21:03:56Z",
+    "input": 21600
+  }
+  "assigned_user": {
+    "id": "518031bcd775355c48a1cd4e",
+    "name": "TODO"
+  },
+  "linked_issue": {
+    "id": 123,
+    "url": "http://google.com",
+    "system": "GitHub Issues"
+  },
+  "trend": [
+    ["2015-05-27T00:00:00.000Z", 123],
+    ["2015-05-27T00:00:00.000Z", 456]
+  ],
+  "latest_event": {
+    "id": "551c5888093024ce168bdfca",
+    "error_class": "Moped::Errors::QueryFailure",
+    "message": "Something bad happened",
+    "context": "api/accounts#index",
+    "release_stage": "production",
+    "severity": "error"
+  }
+}
+
+
 List a Project's Errors
 -----------------------
 
 Get a list of all errors (grouped exceptions) for the specified Bugsnag [Project](projects.md).
 
+
+### Request
+
 ```http
 GET /projects/:project_id/errors
 ```
+
 
 ### Parameters
 
@@ -31,7 +91,8 @@ Name             | Description
 `per_page`       | How many results to return per page. Default: `30`
 `filters`        | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
-### Response
+
+### Response Example
 
 ```http
 Status: 200 OK
@@ -42,27 +103,37 @@ X-Total-Count: 123
 [
   {
     "id": "518031bcd775355c48a1cd4e",
-    "class": "NoMethodError",
-    "last_message": "undefined method `name' for nil:NilClass",
-    "last_context": "mailer#admin",
-    "resolved": false,
-    "occurrences": 12,
-    "users_affected": 13,
-    "contexts": {
-      "mailer#admin": 12
+    "events": 456,
+    "users": 123,
+    "first_seen": "2013-04-30T21:03:56Z",
+    "last_seen": "2013-04-30T21:03:56Z",
+    "status": "snoozed",
+    "snooze_conditions": {
+      "dimension": "time",
+      "target": "2013-04-30T21:03:56Z",
+      "input": 21600
+    }
+    "assigned_user": {
+      "id": "518031bcd775355c48a1cd4e",
+      "name": "TODO"
     },
-    "release_stages": {
-      "production": 12
+    "linked_issue": {
+      "id": 123,
+      "url": "http://google.com",
+      "system": "GitHub Issues"
     },
-    "app_versions": {
-      "1.0.0": 20
-    },
-    "first_received": "2013-04-30T21:03:56Z",
-    "last_received": "2013-07-29T10:42:05Z",
-    "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
-    "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
-    "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-    "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+    "trend": [
+      ["2015-05-27T00:00:00.000Z", 123],
+      ["2015-05-27T00:00:00.000Z", 456]
+    ],
+    "latest_event": {
+      "id": "551c5888093024ce168bdfca",
+      "error_class": "Moped::Errors::QueryFailure",
+      "message": "Something bad happened",
+      "context": "api/accounts#index",
+      "release_stage": "production",
+      "severity": "error"
+    }
   }
 ]
 ```
@@ -73,9 +144,13 @@ Get Error details
 
 Get the details of the given Bugsnag Error.
 
+
+### Request
+
 ```http
 GET /errors/:error_id
 ```
+
 
 ### Response
 
@@ -85,32 +160,42 @@ Status: 200 OK
 ```json
 {
   "id": "518031bcd775355c48a1cd4e",
-  "class": "NoMethodError",
-  "last_message": "undefined method `name' for nil:NilClass",
-  "last_context": "mailer#admin",
-  "resolved": false,
-  "occurrences": 12,
-  "users_affected": 13,
-  "contexts": {
-    "mailer#admin": 12
+  "events": 456,
+  "users": 123,
+  "first_seen": "2013-04-30T21:03:56Z",
+  "last_seen": "2013-04-30T21:03:56Z",
+  "status": "snoozed",
+  "snooze_conditions": {
+    "dimension": "time",
+    "target": "2013-04-30T21:03:56Z",
+    "input": 21600
+  }
+  "assigned_user": {
+    "id": "518031bcd775355c48a1cd4e",
+    "name": "TODO"
   },
-  "release_stages": {
-    "production": 12
+  "linked_issue": {
+    "id": 123,
+    "url": "http://google.com",
+    "system": "GitHub Issues"
   },
-  "app_versions": {
-    "1.0.0": 20
-  },
-  "first_received": "2013-04-30T21:03:56Z",
-  "last_received": "2013-07-29T10:42:05Z",
-  "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
-  "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
-  "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+  "trend": [
+    ["2015-05-27T00:00:00.000Z", 123],
+    ["2015-05-27T00:00:00.000Z", 456]
+  ],
+  "latest_event": {
+    "id": "551c5888093024ce168bdfca",
+    "error_class": "Moped::Errors::QueryFailure",
+    "message": "Something bad happened",
+    "context": "api/accounts#index",
+    "release_stage": "production",
+    "severity": "error"
+  }
 }
 ```
 
 
-Update an Error's status
+TODO: Update an Error's status
 ------------------------
 
 Update the status (resolved, unresolved, etc) of an Error.
@@ -133,27 +218,37 @@ Status: 200 OK
 ```json
 {
   "id": "518031bcd775355c48a1cd4e",
-  "class": "NoMethodError",
-  "last_message": "undefined method `name' for nil:NilClass",
-  "last_context": "mailer#admin",
-  "resolved": false,
-  "occurrences": 12,
-  "users_affected": 13,
-  "contexts": {
-    "mailer#admin": 12
+  "events": 456,
+  "users": 123,
+  "first_seen": "2013-04-30T21:03:56Z",
+  "last_seen": "2013-04-30T21:03:56Z",
+  "status": "snoozed",
+  "snooze_conditions": {
+    "dimension": "time",
+    "target": "2013-04-30T21:03:56Z",
+    "input": 21600
+  }
+  "assigned_user": {
+    "id": "518031bcd775355c48a1cd4e",
+    "name": "TODO"
   },
-  "release_stages": {
-    "production": 12
+  "linked_issue": {
+    "id": 123,
+    "url": "http://google.com",
+    "system": "GitHub Issues"
   },
-  "app_versions": {
-    "1.0.0": 20
-  },
-  "first_received": "2013-04-30T21:03:56Z",
-  "last_received": "2013-07-29T10:42:05Z",
-  "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
-  "events_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/events",
-  "html_url": "https://bugsnag.com/errors/518031bcd775355c48a1cd4e",
-  "url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e"
+  "trend": [
+    ["2015-05-27T00:00:00.000Z", 123],
+    ["2015-05-27T00:00:00.000Z", 456]
+  ],
+  "latest_event": {
+    "id": "551c5888093024ce168bdfca",
+    "error_class": "Moped::Errors::QueryFailure",
+    "message": "Something bad happened",
+    "context": "api/accounts#index",
+    "release_stage": "production",
+    "severity": "error"
+  }
 }
 ```
 
