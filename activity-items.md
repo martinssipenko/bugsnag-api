@@ -41,7 +41,6 @@ Name             | Description
 `unignored`      | The *ignored* status was removed from this error, by a user action
 `first_seen`     | This error was seen for the first time
 `assigned`       | The error was assigned to a Bugsnag user
-`resassigned`    | The associated error was assigned to a different Bugsnag user
 `unassigned`     | The associated error was un-assigned
 `issue_created`  | An issue was created in your issue tracker for this error
 `issue_linked`   | An existing issue from your issues tracker was linked to this error
