@@ -9,6 +9,7 @@ Contents
 
 - [List a Project's Errors](#list-a-project-s-errors)
 - [Get Error details](#get-error-details)
+- [Get Error trend](#get-error-trend)
 - [Update an Error's status](#update-an-error-s-status)
 - [Delete an Error](#delete-an-error)
 
@@ -155,6 +156,42 @@ Status: 200 OK
     "release_stage": "production",
     "severity": "error"
   }
+}
+```
+
+Get Error trend
+-----------------
+
+Get counts of error occurrences between two times, divided into n buckets.
+
+### Request
+
+```http
+GET /errors/:error_id/trend
+```
+
+### Parameters
+
+Name             | Description
+---------------- | -----------
+`start_time`     | The beginning of the time range for the trend data in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
+`end_time`       | The end of the time range for the trend data in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
+`buckets_count`  | How many buckets to use to group the error occurrence counts.
+
+### Response
+
+```http
+Status: 200 OK
+```
+```json
+{
+    "interval": "480m",
+    "trend": [
+        ["2015-01-01T08:00:00Z", 0],
+        ["2015-01-01T16:00:00Z", 4],
+        ["2015-01-02T00:00:00Z", 8],
+        ["2015-01-02T08:00:00Z", 0]
+    ]
 }
 ```
 
