@@ -174,9 +174,10 @@ GET /errors/:error_id/trend
 
 Name             | Description
 ---------------- | -----------
-`start_time`     | The beginning of the time range for the trend data in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
-`end_time`       | The end of the time range for the trend data in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
-`buckets_count`  | How many buckets to use to group the error occurrence counts.
+`buckets_count`  | How many buckets to use to group the error occurrence counts. Allowed values are 1 to 50.
+
+By default, trend data will be returned from the time that the error was first seen to the current time. The time range under consideration can be modified using the `event.since` and `event.before` [Filters](filters.md).
+
 
 ### Response
 
