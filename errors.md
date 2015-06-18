@@ -9,6 +9,7 @@ Contents
 
 - [List a Project's Errors](#list-a-project-s-errors)
 - [Get Error details](#get-error-details)
+- [Get Error trend](#get-error-trend)
 - [Update an Error's status](#update-an-error-s-status)
 - [Delete an Error](#delete-an-error)
 
@@ -156,6 +157,40 @@ Status: 200 OK
     "severity": "error"
   }
 }
+```
+
+Get Error trend
+-----------------
+
+Get counts of error occurrences between two times, divided into n buckets.
+
+### Request
+
+```http
+GET /errors/:error_id/trend
+```
+
+### Parameters
+
+Name             | Description
+---------------- | -----------
+`buckets_count`  | How many buckets to use to group the error occurrence counts. Allowed values are 1 to 50.
+
+By default, trend data will be returned from the time that the error was first seen to the current time. The time range under consideration can be modified using the `event.since` and `event.before` [Filters](filters.md).
+
+
+### Response
+
+```http
+Status: 200 OK
+```
+```json
+[
+  ["2015-01-01T08:00:00Z", 0],
+  ["2015-01-01T16:00:00Z", 4],
+  ["2015-01-02T00:00:00Z", 8],
+  ["2015-01-02T08:00:00Z", 0]
+]
 ```
 
 
