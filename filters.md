@@ -192,12 +192,12 @@ deploy.introduced_in | Events first seen in the given deploy       | *Deploy ID*
 
 ### Projects using app versions
 
-Field                   | Description                                     | Format
-------------------------|-------------------------------------------------|-------------------------------------
-version.seen            | Events seen in the given app version            | *Wildcard String*
-version.introduced      | Events first seen in the given app version      | *Wildcard String*
-version_code.seen       | Events seen in the given version code           | *Integer*
-version_code.introduced | Events first seen in the given version code     | *Integer*
+Field                      | Description                                     | Format
+---------------------------|-------------------------------------------------|-------------------------------------
+version.seen_in            | Events seen in the given app version            | *Wildcard String*
+version.introduced_in      | Events first seen in the given app version      | *Wildcard String*
+version_code.seen_in       | Events seen in the given version code           | *Integer*
+version_code.introduced_in | Events first seen in the given version code     | *Integer*
 
 
 ### Backend project types
