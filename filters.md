@@ -99,7 +99,7 @@ GET /project/:project_id/filters/:filter_field
 Name        | Description
 ------------|------------
 q           | Partial or full query to find filter matches for
-result_size | Number of results to return. Default: `5`
+result_size | Number of results to return. Default: `10`
 
 
 ### Response Fields
@@ -133,6 +133,13 @@ Status: 200 OK
 ]
 ```
 
+This same request can be run for an error to get a list of possible matches, for the given Error and filter field. This could be used to provide suggested filter matches in an autocomplete-like input.
+
+### Request
+
+```http
+GET /error/:error_id/filters/:filter_field
+```
 
 Filtering Errors, Events or Pivots
 ----------------------------------
