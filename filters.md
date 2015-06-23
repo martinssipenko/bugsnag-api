@@ -229,4 +229,4 @@ Field                   | Description                                     | Form
 os.name                 | Events seen on the given O/S                    | *String*
 os.version              | Events seen on the given O/S version            | *Wildcard String*
 device.manufacturer     | Events affecting the given device manufacturer  | *String*
-device.id               | Events affecting the given device ID            | *String*
+device.model            | Events affecting the given device model         | *String*
