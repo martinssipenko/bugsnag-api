@@ -45,7 +45,7 @@ Status: 200 OK
         "value": "app1.ec3.bugsnag.com",
         "events": 123
       }],
-      "none": 14,
+      "no_value": 14,
       "other": 432
     }
   }, {
@@ -57,7 +57,7 @@ Status: 200 OK
         "value": "production",
         "events": 123
       }],
-      "none": 14,
+      "no_value": 14,
       "other": 432
     }
   }
@@ -97,7 +97,7 @@ Status: 200 OK
         "value": "app1.ec3.bugsnag.com",
         "events": 123
       }],
-      "none": 14,
+      "no_value": 14,
       "other": 432
     }
   }, {
@@ -109,7 +109,7 @@ Status: 200 OK
         "value": "production",
         "events": 123
       }],
-      "none": 14,
+      "no_value": 14,
       "other": 432
     }
   }
