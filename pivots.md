@@ -40,20 +40,26 @@ Status: 200 OK
     "field": "device.hostname",
     "name": "Hosts",
     "cardinality": 123,
-    "summary": [{
-      "value": "app1.ec3.bugsnag.com",
-      "events": 123,
-      "proportion": 0.75
-    }]
+    "summary": {
+      "list": [{
+        "value": "app1.ec3.bugsnag.com",
+        "events": 123
+      }],
+      "none": 14,
+      "other": 432
+    }
   }, {
     "field": "app.release_stage",
     "name": "Release Stages",
     "cardinality": 456,
-    "summary": [{
-      "value": "production",
-      "events": 123,
-      "proportion": 0.1
-    }]
+    "summary": {
+      "list": [{
+        "value": "production",
+        "events": 123
+      }],
+      "none": 14,
+      "other": 432
+    }
   }
 ]
 ```
@@ -86,20 +92,26 @@ Status: 200 OK
     "field": "device.hostname",
     "name": "Hosts",
     "cardinality": 123,
-    "summary": [{
-      "value": "app1.ec3.bugsnag.com",
-      "events": 123,
-      "proportion": 0.75
-    }]
+    "summary": {
+      "list": [{
+        "value": "app1.ec3.bugsnag.com",
+        "events": 123
+      }],
+      "none": 14,
+      "other": 432
+    }
   }, {
     "field": "app.release_stage",
     "name": "Release Stages",
     "cardinality": 456,
-    "summary": [{
-      "value": "production",
-      "events": 123,
-      "proportion": 0.1
-    }]
+    "summary": {
+      "list": [{
+        "value": "production",
+        "events": 123
+      }],
+      "none": 14,
+      "other": 432
+    }
   }
 ]
 ```
