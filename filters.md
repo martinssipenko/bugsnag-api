@@ -98,8 +98,7 @@ GET /project/:project_id/filters/:filter_field
 
 Name        | Description
 ------------|------------
-q           | Partial or full query to find filter matches for
-result_size | Number of results to return. Default: `10`
+prefix      | Partial or full query to find filter matches for
 
 
 ### Response Fields
