@@ -22,6 +22,9 @@ The following fields are present on Error responses:
 Name                | Description
 --------------------| -----------
 `id`                | The ID of this error, eg *515fb9337c1074f6fd000009*
+`error_class`       | The class of the latest exception grouped under this error (not filtered)
+`message`           | The latest error message for this error (not filtered)
+`context`           | The latest context where this error occurred (not filtered)
 `events`            | The number of occurrences of this error (respects filters)
 `users`             | The number of users who saw this error (respects filters)
 `first_seen`        | When this error was first seen, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
@@ -77,7 +80,7 @@ X-Total-Count: 123
       "dimension": "time",
       "target": "2013-04-30T21:03:56Z",
       "input": 21600
-    }
+    },
     "assigned_user": {
       "id": "518031bcd775355c48a1cd4e",
       "name": "TODO"
@@ -125,6 +128,9 @@ Status: 200 OK
 ```json
 {
   "id": "518031bcd775355c48a1cd4e",
+  "error_class": "RuntimeError",
+  "message": "No such connection",
+  "context": "dashboard/home#index",
   "events": 456,
   "users": 123,
   "first_seen": "2013-04-30T21:03:56Z",
@@ -134,7 +140,7 @@ Status: 200 OK
     "dimension": "time",
     "target": "2013-04-30T21:03:56Z",
     "input": 21600
-  }
+  },
   "assigned_user": {
     "id": "518031bcd775355c48a1cd4e",
     "name": "TODO"
@@ -226,7 +232,7 @@ Status: 200 OK
     "dimension": "time",
     "target": "2013-04-30T21:03:56Z",
     "input": 21600
-  }
+  },
   "assigned_user": {
     "id": "518031bcd775355c48a1cd4e",
     "name": "TODO"
