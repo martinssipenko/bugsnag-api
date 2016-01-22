@@ -25,6 +25,7 @@ Name                | Description
 `error_class`       | The class of the latest exception grouped under this error (not filtered)
 `message`           | The latest error message for this error (not filtered)
 `context`           | The latest context where this error occurred (not filtered)
+`severity`          | The severity of this error (not filtered)
 `events`            | The number of occurrences of this error (respects filters)
 `users`             | The number of users who saw this error (respects filters)
 `first_seen`        | When this error was first seen, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (respects filters)
@@ -131,6 +132,7 @@ Status: 200 OK
   "error_class": "RuntimeError",
   "message": "No such connection",
   "context": "dashboard/home#index",
+  "severity": "warning",
   "events": 456,
   "users": 123,
   "first_seen": "2013-04-30T21:03:56Z",
