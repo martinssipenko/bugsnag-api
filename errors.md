@@ -55,9 +55,9 @@ GET /projects/:project_id/errors
 
 Name             | Description
 ---------------- | -----------
-`sort`           | What to sort results by. Can be only `updated_at`. Default: `updated_at`
-`direction`      | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
-`per_page`       | How many results to return per page. Default: `30`
+`sort`           | What to sort results by. Can be only `first_seen`, `last_seen`, `users`, `events`. Default: `last_seen`
+`order`      | The direction of the sort. Can be either `asc` or `desc`. Default: `desc`
+`offset`       | How many results to return per page. Default: `30`
 `filters`        | Filters to apply to the query, see [filtering errors, events or pivots](filters.md#filtering-errors-events-or-pivots) for details
 
 
