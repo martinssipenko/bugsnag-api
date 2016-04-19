@@ -60,6 +60,7 @@ Link: <https://api.bugsnag.com/projects/50baed119bf39c1431000004/errors?offset=1
     "app_versions": {
       "1.0.0": 20
     },
+    "assigned_user_id": "518031bcd775355c48a1cd4e",
     "first_received": "2013-04-30T21:03:56Z",
     "last_received": "2013-07-29T10:42:05Z",
     "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
@@ -110,6 +111,7 @@ Status: 200 OK
   "app_versions": {
     "1.0.0": 20
   },
+  "assigned_user_id": "518031bcd775355c48a1cd4e",
   "first_received": "2013-04-30T21:03:56Z",
   "last_received": "2013-07-29T10:42:05Z",
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
@@ -160,6 +162,7 @@ Status: 200 OK
   "app_versions": {
     "1.0.0": 20
   },
+  "assigned_user_id": "518031bcd775355c48a1cd4e",
   "first_received": "2013-04-30T21:03:56Z",
   "last_received": "2013-07-29T10:42:05Z",
   "comments_url": "https://api.bugsnag.com/errors/518031bcd775355c48a1cd4e/comments",
