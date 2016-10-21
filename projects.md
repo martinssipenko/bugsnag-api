@@ -142,7 +142,7 @@ Create a Project
 Create a new Project on the specified Bugsnag [Account](accounts.md).
 
 ```http
-POST /account/:account_id/projects
+POST /accounts/:account_id/projects
 ```
 
 ### Parameters
